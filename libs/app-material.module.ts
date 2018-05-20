@@ -12,7 +12,14 @@ import {
   MatInputModule,
   MatGridListModule,
   MatTabsModule,
-  MatProgressBarModule
+  MatProgressBarModule,
+  MatCheckboxModule,
+  MatRadioModule,
+  MatSelectModule,
+  MatMenuModule,
+  MatDividerModule,
+  MatButtonToggleModule,
+  MatStepperModule
 } from '@angular/material';
 
 @NgModule({
@@ -29,7 +36,14 @@ import {
     MatInputModule,
     MatGridListModule,
     MatTabsModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatCheckboxModule,
+    MatRadioModule,
+    MatSelectModule,
+    MatMenuModule,
+    MatDividerModule,
+    MatButtonToggleModule,
+    MatStepperModule
   ],
   exports: [
     MatToolbarModule,
@@ -43,7 +57,14 @@ import {
     MatInputModule,
     MatGridListModule,
     MatTabsModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatCheckboxModule,
+    MatRadioModule,
+    MatSelectModule,
+    MatMenuModule,
+    MatDividerModule,
+    MatButtonToggleModule,
+    MatStepperModule
   ],
   declarations: []
 })
