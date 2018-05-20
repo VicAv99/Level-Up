@@ -1,0 +1,20 @@
+<div class="wrapper">
+  <mat-card *ngFor="let cat of categories">
+    <mat-card-title>
+      {{cat.Name}}
+    </mat-card-title>
+    <mat-card-content>
+      Category ID: {{cat.ID}}
+      <div *ngFor="let sub of subs; index as i">
+      <ul>
+        <li>{{i}} - {{sub}}</li>
+      </ul>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="accent">Products</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+<pre>{{subs | json}}</pre>
