@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent {
   title = 'YouTube API';
   links = [
-    { path: '/home', icon: 'home', label: 'Home' }
+    { path: '/home', icon: 'home', label: 'Home' },
+    { path: '/playlist', icon: 'play_arrow', label: 'Playlist' }
   ];
 }
