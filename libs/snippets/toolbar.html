@@ -1,23 +1,24 @@
 <mat-toolbar color="primary">
-  <button (click)="sidenav.toggle()" mat-mini-fab>
-    <mat-icon>menu</mat-icon>
-  </button>
-  <span>{{title}}</span>
-</mat-toolbar>
+    <button (click)="sidenav.toggle()" mat-raised-button color="accent">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span><a class="title-link" routerLink="/home">{{title}}</a></span>
+  </mat-toolbar>
 
-<mat-sidenav-container>
-    <mat-sidenav #sidenav mode="side">
-      <nav>
-        <a class="nav-link"
-           mat-button
-           *ngFor="let link of links"
-           [routerLink]="link.path"
-           routerLinkActive="active">
-           <mat-icon>{{link.icon}}</mat-icon>
-           {{link.label}}
-        </a>
-      </nav>
-    </mat-sidenav>
+  <mat-sidenav-container>
+      <mat-sidenav #sidenav mode="push">
+        <nav>
+          <a class="nav-link"
+             color="accent"
+             mat-button
+             *ngFor="let link of links"
+             [routerLink]="link.path"
+             routerLinkActive="active">
+             <mat-icon color="primary">{{link.icon}}</mat-icon>
+             {{link.label}}
+          </a>
+        </nav>
+      </mat-sidenav>
 
-  <router-outlet></router-outlet>
-</mat-sidenav-container>
+    <router-outlet></router-outlet>
+  </mat-sidenav-container>

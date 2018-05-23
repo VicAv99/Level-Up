@@ -6,6 +6,8 @@ import { AppMaterialModule } from '@levelUp/app-material.module';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { TweetsComponent } from './tweets/tweets.component';
+import { PlaylistService } from './apps/youtube-api/src/shared/playlist.service';
+import { TweetsService } from './shared/tweets.service';
 
 @NgModule({
   imports: [
@@ -15,6 +17,7 @@ import { TweetsComponent } from './tweets/tweets.component';
     AppRoutingModule
   ],
   declarations: [AppComponent, HomeComponent, TweetsComponent],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [PlaylistService, TweetsService]
 })
 export class AppModule {}

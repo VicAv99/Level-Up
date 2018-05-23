@@ -42,3 +42,4 @@ testem.log
 Thumbs.db
 
 /apps/youtube-api/src/api.ts
+/apps/twitter-api/src/env.ts
