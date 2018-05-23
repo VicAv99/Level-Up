@@ -9,3 +9,4 @@ VenturPlex Challenge to create an app (Simple Master Detail View) a day for 30 d
 > Links to apps
 > - [YouTube API](http://levelup-youtube-challenge.surge.sh/) app
 > - [Twitter API](http://twitter-app.surge.sh) app
+> - [StarWars API](http://starwars-api-app.surge.sh) app
