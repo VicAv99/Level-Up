@@ -7,4 +7,5 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 VenturPlex Challenge to create an app (Simple Master Detail View) a day for 30 days. Using 30 different API's in an hour for each.
 
 > Links to apps
-> - [YouTube API]() app
+> - [YouTube API](http://levelup-youtube-challenge.surge.sh/) app
+> - [Twitter API](http://twitter-app.surge.sh) app
