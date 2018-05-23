@@ -8,7 +8,8 @@
 <mat-sidenav-container>
     <mat-sidenav #sidenav mode="side">
       <nav>
-        <a mat-button
+        <a class="nav-link"
+           mat-button
            *ngFor="let link of links"
            [routerLink]="link.path"
            routerLinkActive="active">

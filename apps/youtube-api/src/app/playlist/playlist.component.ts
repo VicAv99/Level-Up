@@ -11,7 +11,7 @@ export class PlaylistComponent implements OnInit {
 
   constructor(private playlistService: PlaylistService) { }
   selectedPlaylist: Snippet;
-  playlist;
+  playlist = {};
   snippet: Snippet;
   snippets: Snippet[];
 

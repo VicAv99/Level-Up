@@ -1,6 +1,6 @@
-mat-card {
+/* mat-card {
   width: 475px;
-}
+} */
 
 mat-card-content {
   display: flex;
@@ -15,18 +15,9 @@ mat-card-content {
   margin: 20px 0 10px 0;
 }
 
-.smaller-card {
+/* .smaller-card {
   width: fit-content;
-}
-
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  grid-gap: 10px;
-  grid-auto-rows: minmax(100px, auto);
-  margin-top: 10px;
-  margin-left: 15%;
-}
+} */
 
 .playlist-list {
   grid-column: 3/7;
@@ -41,8 +32,14 @@ mat-card-content {
 
 .list-grid {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
   grid-auto-rows: minmax(100px, auto);
   margin-top: 10px;
+  justify-content: center;
+}
+
+.detail-grid {
+  display: flex;
+  justify-content: space-around;
 }

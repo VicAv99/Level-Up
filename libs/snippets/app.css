@@ -12,6 +12,10 @@ mat-sidenav {
   width: 200px;
 }
 
+span {
+  margin-right: 3%;
+}
+
 .mat-sidenav-container {
   background: whitesmoke;
   flex: 1;
