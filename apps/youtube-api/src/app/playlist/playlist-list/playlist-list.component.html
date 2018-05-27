@@ -1,23 +1,29 @@
-<mat-card>
-  <mat-card-header>
-    <mat-card-title><h2>Title</h2></mat-card-title>
-    <mat-card-subtitle>Added by: </mat-card-subtitle>
-  </mat-card-header>
+<div class="list-grid">
+  <mat-card *ngFor="let play of playlist">
+    <mat-card-header>
+      <mat-card-title><h2>{{play.snippet.title}}</h2></mat-card-title>
+      <mat-card-subtitle>Added by: {{play.snippet.channelTitle}}</mat-card-subtitle>
+    </mat-card-header>
 
-  <img/>
+    <img [src]="play.snippet.thumbnails.high.url"/>
 
-  <mat-card-content>
-    <p>desciption</p>
-  </mat-card-content>
+    <mat-card-content>
+      {{play.snippet.description}}
+    </mat-card-content>
 
-  <mat-card-actions>
-    <button mat-raised-button color="primary">
-      Select
-      <mat-icon>touch_app</mat-icon>
-    </button>
-    <button mat-raised-button color="accent" class="right-button">
-      Delete
-      <mat-icon>delete</mat-icon>
-    </button>
-  </mat-card-actions>
-</mat-card>
+    <mat-card-actions>
+      <button mat-raised-button color="primary"
+              (click)="selected.emit(play.snippet)">
+        Select
+        <mat-icon>touch_app</mat-icon>
+      </button>
+      <button mat-raised-button color="accent" class="right-button"
+              (click)="deleted.emit(play)">
+        Remove
+        <mat-icon>delete</mat-icon>
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+<!-- <pre>{{playlist.items | json}}</pre> -->

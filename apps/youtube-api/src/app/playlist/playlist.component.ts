@@ -10,10 +10,8 @@ import { Snippet } from '../shared/snippet.model';
 export class PlaylistComponent implements OnInit {
 
   constructor(private playlistService: PlaylistService) { }
-  selectedPlaylist: Snippet;
-  playlist = {};
-  snippet: Snippet;
-  snippets: Snippet[];
+  currentPlaylist: Snippet;
+  playlist: Snippet[];
 
   ngOnInit() {
     this.displayPlaylist();
@@ -24,17 +22,27 @@ export class PlaylistComponent implements OnInit {
       .subscribe(playlist => this.playlist = playlist);
   }
 
-  reset() {
-    this.playlist = { channelTitle: '', description: '', publishedAt: '', thumbnails: null, title: '' };
-  }
-
-  select(snippet) {
-    this.selectedPlaylist = snippet.title;
+  selectVideo(snippet) {
+    this.currentPlaylist = snippet;
     console.log(snippet);
   }
 
-  delete(playlist) {
+  deleteVideo() {
+    alert(`your video will delete`);
+    console.log('DELETING');
+  }
+
+  saveVideo() {
+    alert(`saving your video`)
+    console.log('SAVING');
+  }
+
+  cancel(snippet) {
     this.reset();
-    console.log(this.reset());
+  }
+
+  reset() {
+    this.currentPlaylist =
+      { channelTitle: '', description: '', publishedAt: '', thumbnails: {}, title: ''};
   }
 }

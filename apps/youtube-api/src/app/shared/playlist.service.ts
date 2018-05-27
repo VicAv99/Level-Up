@@ -12,8 +12,8 @@ export class PlaylistService {
   constructor(private http: HttpClient) { }
 
   getPlaylist() {
-    return this.http.get(`${PLAYLIST}`)
-      .pipe(map(res => res));
+    return this.http.get<any>(`${PLAYLIST}`)
+      .pipe(map(res => res.items));
   }
 
 }

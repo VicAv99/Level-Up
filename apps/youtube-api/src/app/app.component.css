@@ -28,6 +28,11 @@ span:hover {
   cursor: pointer;
 }
 
+a.ventur {
+  color: white;
+  text-decoration: none;
+}
+
 .mat-sidenav-container {
   background: whitesmoke;
   flex: 1;

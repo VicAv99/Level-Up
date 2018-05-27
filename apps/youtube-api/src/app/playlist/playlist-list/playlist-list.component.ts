@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-playlist-list',
@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./playlist-list.component.css']
 })
 export class PlaylistListComponent implements OnInit {
+  @Input() playlist;
+  @Output() selected = new EventEmitter();
+  @Output() deleted = new EventEmitter();
+
 
   constructor() { }
 

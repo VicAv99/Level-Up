@@ -1,9 +1,13 @@
 <div class="playlist-grid">
   <div class="playlist-list">
-    <app-playlist-list></app-playlist-list>
+    <app-playlist-list [playlist]="playlist"
+                       (selected)="selectVideo($event)"
+                       (deleted)="deleteVideo($event)"></app-playlist-list>
   </div>
   <div class="playlist-detail">
-    <app-playlist-detail></app-playlist-detail>
+    <app-playlist-detail [video]="currentPlaylist"
+                         (saved)="saveVideo($event)"
+                         (cancelled)="cancel($event)"></app-playlist-detail>
   </div>
 </div>
 

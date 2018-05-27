@@ -4,18 +4,18 @@
       <h2>Edit Video</h2>
     </mat-card-title>
   </mat-card-header>
-  <form #form="ngForm">
+  <form (submit)="saved.emit(selectedPlaylist)">
     <mat-card-content>
       <mat-input-container>
-        <input matInput placeholder="Title" type="text" name="title">
+        <input matInput placeholder="Title" [(ngModel)]="selectedPlaylist.title" type="text" name="title">
       </mat-input-container>
       <mat-input-container>
-        <input matInput placeholder="Description" type="text" name="name">
+        <input matInput placeholder="Description" [(ngModel)]="selectedPlaylist.description" type="text" name="name">
       </mat-input-container>
     </mat-card-content>
     <mat-card-actions>
       <button mat-raised-button type="submit"color="primary">Save</button>
-      <button mat-raised-button type="button"color="accent">Cancel</button>
+      <button mat-raised-button type="button"color="accent" (click)="cancelled.emit(selectedPlaylist)">Cancel</button>
     </mat-card-actions>
   </form>
 </mat-card>
