@@ -14,7 +14,7 @@
     "start:spotify": "ng serve -a spotify-api -p 4205",
     "start:itunes": "ng serve -a itunes-api -p 4206",
     "build": "ng build",
-    "deploy:youtube": "ng build -a youtube-api && cp ./dist/apps/youtube-api/index.html ./dist/apps/youtube-api/200.html && surge ./dist/apps/youtube-api",
+    "deploy:youtube": "ng build -a youtube-api && cp ./dist/apps/youtube-api/index.html ./dist/apps/youtube-api/200.html && surge ./dist/apps/youtube-api https://youtube-api-app.surge.sh",
     "test": "ng test",
     "lint": "./node_modules/.bin/nx lint && ng lint",
     "e2e": "ng e2e",
