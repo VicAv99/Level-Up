@@ -9,6 +9,8 @@ import { AppMaterialModule } from '@levelUp/app-material.module';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { StarshipsService } from './shared/starships.service';
+import { StarshipsComponent } from './starships/starships.component';
+import { StarshipsListComponent } from './starships/starships-list/starships-list.component';
 
 @NgModule({
   imports: [
@@ -19,7 +21,7 @@ import { StarshipsService } from './shared/starships.service';
     HttpClientModule,
     FormsModule
   ],
-  declarations: [AppComponent, HomeComponent],
+  declarations: [AppComponent, HomeComponent, StarshipsComponent, StarshipsListComponent],
   bootstrap: [AppComponent],
   providers: [StarshipsService]
 })
