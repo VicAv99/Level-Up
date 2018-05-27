@@ -27,8 +27,8 @@ export class PlaylistComponent implements OnInit {
     console.log(snippet);
   }
 
-  deleteVideo() {
-    alert(`your video will delete`);
+  removeVideo() {
+    alert(`your video will removed`);
     console.log('DELETING');
   }
 

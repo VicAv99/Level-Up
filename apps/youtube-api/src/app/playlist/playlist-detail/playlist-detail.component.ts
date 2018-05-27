@@ -13,9 +13,6 @@ export class PlaylistDetailComponent {
   @Output() cancelled = new EventEmitter();
 
   @Input() set video(value: Snippet) {
-    if (value) {
-      this.originalVideo = value.title;
-    }
     this.selectedPlaylist = Object.assign({}, value);
   };
 

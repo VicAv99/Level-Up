@@ -2,7 +2,7 @@
   <div class="playlist-list">
     <app-playlist-list [playlist]="playlist"
                        (selected)="selectVideo($event)"
-                       (deleted)="deleteVideo($event)"></app-playlist-list>
+                       (deleted)="removeVideo($event)"></app-playlist-list>
   </div>
   <div class="playlist-detail">
     <app-playlist-detail [video]="currentPlaylist"

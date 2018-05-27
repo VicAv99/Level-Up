@@ -5,15 +5,9 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   templateUrl: './playlist-list.component.html',
   styleUrls: ['./playlist-list.component.css']
 })
-export class PlaylistListComponent implements OnInit {
+export class PlaylistListComponent {
   @Input() playlist;
   @Output() selected = new EventEmitter();
   @Output() deleted = new EventEmitter();
-
-
-  constructor() { }
-
-  ngOnInit() {
-  }
 
 }
