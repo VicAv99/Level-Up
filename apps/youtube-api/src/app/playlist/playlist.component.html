@@ -1,50 +1,13 @@
-<!-- details -->
-<div class="detail-grid">
-  <mat-card class="smaller-card">
-    <mat-card-header>
-      <mat-card-title>
-        <h2>Edit Video</h2>
-      </mat-card-title>
-    </mat-card-header>
-    <form #form="ngForm">
-      <mat-card-content>
-        <mat-input-container>
-          <input matInput placeholder="Title" [(ngModel)]="selectedPlaylist" type="text" name="title">
-        </mat-input-container>
-        <mat-input-container>
-          <input matInput placeholder="Description" type="text" name="name">
-        </mat-input-container>
-      </mat-card-content>
-      <mat-card-actions>
-        <button mat-raised-button type="submit"color="primary">Save</button>
-        <button mat-raised-button type="button"color="accent" (click)="delete(playlist.snippet)">Cancel</button>
-      </mat-card-actions>
-    </form>
-  </mat-card>
+<div class="playlist-grid">
+  <div class="playlist-list">
+    <app-playlist-list></app-playlist-list>
+  </div>
+  <div class="playlist-detail">
+    <app-playlist-detail></app-playlist-detail>
+  </div>
 </div>
 
-<!-- list -->
-<div class="list-grid">
-  <mat-card *ngFor="let play of playlist.items">
-    <mat-card-header>
-      <mat-card-title><h2>{{play.snippet.title}}</h2></mat-card-title>
-      <mat-card-subtitle>Added by: {{play.snippet.channelTitle}}</mat-card-subtitle>
-    </mat-card-header>
-    <img  align="center" [src]="play.snippet.thumbnails.high.url"/>
-    <mat-card-content>
-      <p>{{play.snippet.description}}</p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-raised-button color="primary" (click)="select(play.snippet)">
-        Select
-        <mat-icon>touch_app</mat-icon>
-      </button>
-      <button mat-raised-button color="accent">
-        Delete
-        <mat-icon>delete</mat-icon>
-      </button>
-    </mat-card-actions>
-  </mat-card>
-</div>
 
-<pre>{{playlist | json}}</pre>
+
+
+<!-- <pre>{{playlist | json}}</pre> -->

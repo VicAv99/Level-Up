@@ -10,6 +10,7 @@ export class AppComponent implements OnInit {
   links = [
     { path: '/home', icon: 'home', label: 'Home' },
     { path: '/species', icon: 'loyalty', label: 'Species' },
+    { path: '/dashboard', icon: 'person', label: 'Dashboard' }
   ];
   constructor() {}
 

@@ -9,6 +9,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { PlaylistComponent } from './playlist/playlist.component';
 import { PlaylistService } from './shared/playlist.service';
+import { PlaylistListComponent } from './playlist/playlist-list/playlist-list.component';
+import { PlaylistDetailComponent } from './playlist/playlist-detail/playlist-detail.component';
 
 @NgModule({
   imports: [
@@ -19,7 +21,7 @@ import { PlaylistService } from './shared/playlist.service';
     AppRoutingModule,
     AppMaterialModule,
   ],
-  declarations: [AppComponent, HomeComponent, PlaylistComponent],
+  declarations: [AppComponent, HomeComponent, PlaylistComponent, PlaylistListComponent, PlaylistDetailComponent],
   bootstrap: [AppComponent],
   providers: [PlaylistService]
 })

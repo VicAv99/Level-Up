@@ -1,0 +1,26 @@
+/* *:not(path):not(g) {
+	color:                    hsla(210, 100%, 100%, 0.9) !important;
+	background:               hsla(210, 100%,  50%, 0.2) !important;
+	outline:    solid 0.25rem hsla(210, 100%, 100%, 0.5) !important;
+
+	box-shadow: none !important;
+} */
+
+mat-card {
+  padding-top: 0;
+  padding-bottom: 35px;
+}
+
+mat-card-content {
+  padding: 15px 0;
+}
+
+mat-card-actions {
+  margin-left: 0;
+  padding: 0;
+  width: 100%;
+}
+
+button.right-button {
+  margin-left: 10px;
+}

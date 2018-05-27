@@ -1,5 +1,35 @@
+/* *:not(path):not(g) {
+	color:                    hsla(210, 100%, 100%, 0.9) !important;
+	background:               hsla(210, 100%,  50%, 0.2) !important;
+	outline:    solid 0.25rem hsla(210, 100%, 100%, 0.5) !important;
+
+	box-shadow: none !important;
+} */
+
+mat-card-header, mat-card-content, mat-card-actions {
+  width: 100%;
+}
+
+mat-card {
+  padding-top: 0;
+  padding-bottom: 35px;
+}
+
 mat-card-subtitle {
   margin-left: 10px;
+}
+
+mat-card-content {
+  padding: 15px 0;
+}
+
+mat-card-content p {
+  margin-left: 10px;
+}
+
+mat-card-actions {
+  margin-left: 0;
+  padding: 0;
 }
 
 .wrapper {
@@ -12,4 +42,10 @@ mat-card-subtitle {
 .home-card {
   grid-column: 2/3;
   grid-row: 2;
+  margin-bottom: 25%;
+}
+
+.mute {
+  color: rgba(0, 0, 0, 0.555);
+  margin-left: 20px !important;
 }
