@@ -5,7 +5,7 @@ import { map } from 'rxjs/operators';
 const SPECIES = 'https://swapi.co/api/species/';
 
 @Injectable()
-export class SpeciesService {
+export class StarshipsService {
 
   constructor(private http: HttpClient) { }
 

@@ -8,9 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
   title = 'StarWars API App';
   links = [
-    { path: '/home', icon: 'home', label: 'Home' },
-    { path: '/species', icon: 'loyalty', label: 'Species' },
-    { path: '/dashboard', icon: 'person', label: 'Dashboard' }
+    { path: '/home', icon: 'home', label: 'Home' }
   ];
   constructor() {}
 
