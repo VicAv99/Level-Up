@@ -7,7 +7,6 @@ import { Snippet } from '../../shared/snippet.model';
   styleUrls: ['./playlist-detail.component.css']
 })
 export class PlaylistDetailComponent {
-  originalVideo: string;
   selectedPlaylist: Snippet;
   @Output() saved = new EventEmitter();
   @Output() cancelled = new EventEmitter();

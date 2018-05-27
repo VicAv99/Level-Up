@@ -1,1 +1,13 @@
-<app-starships-list></app-starships-list>
+<div class="starships-grid">
+  <div class="starships-list">
+    <app-starships-list [starships]='starships'
+                        (selected)="selectStarship($event)"
+                        (deleted)="deleteStarhip($event)"></app-starships-list>
+  </div>
+  <div class="starships-detail">
+    <app-starships-detail [starship]="currentStarship"
+                          (cancelled)="cancel($event)"
+                          (saved)="saveStarship($event)"></app-starships-detail>
+  </div>
+</div>
+

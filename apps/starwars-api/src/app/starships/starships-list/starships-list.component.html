@@ -1,3 +1,23 @@
-<p>
-  starships-list works!
-</p>
+<div class="list-grid">
+  <mat-card *ngFor="let star of starships">
+    <mat-card-header>
+      <mat-card-title><h2>{{star.name}}</h2></mat-card-title>
+      <mat-card-subtitle>{{star.model}}</mat-card-subtitle>
+    </mat-card-header>
+    <img/>
+    <mat-card-content>
+      <h3>Credit Cost: {{star.cost_in_credits}}</h3>
+      <h3>Crew Requirement: {{star.crew}}</h3>
+      <h3>Cargo Capacity: {{star.cargo_capacity}}</h3>
+      <p>The best in {{star.starship_class}} class and {{star.manufacturer}}'s
+      best rated with {{star.hyperdrive_rating}}.</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="selected.emit(star)">Select<mat-icon>touch_app</mat-icon></button>
+      <button mat-raised-button (click)="deleted.emit()"
+      color="accent">Remove<mat-icon>delete</mat-icon></button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+<pre>{{starships | json}}</pre>

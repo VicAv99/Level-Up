@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { StarshipsService } from './shared/starships.service';
 import { StarshipsComponent } from './starships/starships.component';
 import { StarshipsListComponent } from './starships/starships-list/starships-list.component';
+import { StarshipsDetailComponent } from './starships/starships-detail/starships-detail.component';
 
 @NgModule({
   imports: [
@@ -21,7 +22,7 @@ import { StarshipsListComponent } from './starships/starships-list/starships-lis
     HttpClientModule,
     FormsModule
   ],
-  declarations: [AppComponent, HomeComponent, StarshipsComponent, StarshipsListComponent],
+  declarations: [AppComponent, HomeComponent, StarshipsComponent, StarshipsListComponent, StarshipsDetailComponent],
   bootstrap: [AppComponent],
   providers: [StarshipsService]
 })
