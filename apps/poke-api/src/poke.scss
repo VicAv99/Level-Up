@@ -1,0 +1,9 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '~@angular/material/theming';
+@include mat-core();
+
+// poke theme
+$poke-theme-primary: mat-palette($mat-indigo, A400);
+$poke-theme-accent: mat-palette($mat-yellow, 600);
+$poke-theme-warn: mat-palette($mat-red, 500);
+$poke-theme: mat-light-theme( $poke-theme-primary, $poke-theme-accent, $poke-theme-warn);
