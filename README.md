@@ -10,6 +10,7 @@ VenturPlex Challenge to create an app (Simple Master Detail View) a day for 30 d
 > - [YouTube API](http://youtube-api-app.surge.sh/) app
 > - [Twitter API](http://twitter-app.surge.sh) app
 > - [StarWars API](http://starwars-api-app.surge.sh) app
+> - [Poke API](http://poke-app.surge.sh) app
 
 ## List of API's
 - [YouTube](https://developers.google.com/youtube/v3/getting-started)
