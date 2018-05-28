@@ -3,6 +3,7 @@ import { AppComponent } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NxModule } from '@nrwl/nx';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppMaterialModule } from '@levelUp/app-material.module';
 import { HomeComponent } from './home/home.component';
@@ -15,6 +16,7 @@ import { PokemonService } from './shared/pokemon.service';
   imports: [
     BrowserModule,
     NxModule.forRoot(),
+    HttpClientModule,
     AppRoutingModule,
     AppMaterialModule
   ],

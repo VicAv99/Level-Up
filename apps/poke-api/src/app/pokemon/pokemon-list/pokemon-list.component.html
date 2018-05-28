@@ -1,3 +1,12 @@
-<p>
-  pokemon-list works!
-</p>
+<ul *ngFor="let poke of pokeurl">
+  <li>
+    <p (click)="url.emit(poke.url)">{{poke.name}}</p>
+  </li>
+</ul>
+
+
+<h1>{{pokeid.name}}</h1>
+<p>{{pokeid.abilities[0].ability.name}}</p>
+
+
+<!-- <pre>{{pokeid | json}}</pre> -->

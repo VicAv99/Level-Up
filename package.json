@@ -17,6 +17,7 @@
     "deploy:youtube": "ng build -a youtube-api && cp ./dist/apps/youtube-api/index.html ./dist/apps/youtube-api/200.html && surge ./dist/apps/youtube-api https://youtube-api-app.surge.sh",
     "deploy:twitter": "ng build -a twitter-api && cp ./dist/apps/twitter-api/index.html ./dist/apps/twitter-api/200.html && surge ./dist/apps/twitter-api https://twitter-app.surge.sh",
     "deploy:starwars": "ng build -a starwars-api && cp ./dist/apps/starwars-api/index.html ./dist/apps/starwars-api/200.html && surge ./dist/apps/starwars-api https://starwars-api-app.surge.sh",
+    "deploy:poke": "ng build -a poke-api && cp ./dist/apps/poke-api/index.html ./dist/apps/poke-api/200.html && surge ./dist/apps/poke-api https://poke-app.surge.sh",
     "test": "ng test",
     "lint": "./node_modules/.bin/nx lint && ng lint",
     "e2e": "ng e2e",

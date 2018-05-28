@@ -9,7 +9,7 @@ export class AppComponent implements OnInit {
   title = 'Poke API App';
   links = [
     { path: '/home', icon: 'home', label: 'Home' },
-    { path: '/<somepath>', icon: 'loyalty', label: '<somelabel>' },
+    { path: '/pokemon', icon: 'loyalty', label: 'Pokemon' },
   ];
   constructor() {}
 
