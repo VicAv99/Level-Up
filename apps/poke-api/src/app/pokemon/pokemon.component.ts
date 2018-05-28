@@ -9,7 +9,7 @@ import { PokeUrl } from '../shared/pokeurl.model';
 })
 export class PokemonComponent implements OnInit {
   pokeurl: PokeUrl[];
-  pokeid;
+  pokeid: any[];
 
   constructor(private pokemonService: PokemonService) { }
 
