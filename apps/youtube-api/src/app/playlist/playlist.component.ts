@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PlaylistService } from '../shared/playlist.service';
 import { Snippet } from '../shared/snippet.model';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-playlist',

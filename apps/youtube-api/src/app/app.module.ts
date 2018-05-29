@@ -11,6 +11,7 @@ import { PlaylistComponent } from './playlist/playlist.component';
 import { PlaylistService } from './shared/playlist.service';
 import { PlaylistListComponent } from './playlist/playlist-list/playlist-list.component';
 import { PlaylistDetailComponent } from './playlist/playlist-detail/playlist-detail.component';
+import { PlaylistVideoComponent } from './playlist/playlist-video/playlist-video.component';
 
 @NgModule({
   imports: [
@@ -21,7 +22,7 @@ import { PlaylistDetailComponent } from './playlist/playlist-detail/playlist-det
     AppRoutingModule,
     AppMaterialModule,
   ],
-  declarations: [AppComponent, HomeComponent, PlaylistComponent, PlaylistListComponent, PlaylistDetailComponent],
+  declarations: [AppComponent, HomeComponent, PlaylistComponent, PlaylistListComponent, PlaylistDetailComponent, PlaylistVideoComponent],
   bootstrap: [AppComponent],
   providers: [PlaylistService]
 })

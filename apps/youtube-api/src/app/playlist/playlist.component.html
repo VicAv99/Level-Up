@@ -4,6 +4,11 @@
                        (selected)="selectVideo($event)"
                        (deleted)="removeVideo($event)"></app-playlist-list>
   </div>
+
+  <div class="playlist-video">
+    <app-playlist-video></app-playlist-video>
+  </div>
+
   <div class="playlist-detail">
     <app-playlist-detail [video]="currentPlaylist"
                          (saved)="saveVideo($event)"
