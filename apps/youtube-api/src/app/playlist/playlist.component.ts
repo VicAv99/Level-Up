@@ -16,6 +16,7 @@ export class PlaylistComponent implements OnInit {
 
   ngOnInit() {
     this.displayPlaylist();
+    this.level();
   }
 
   displayPlaylist() {
@@ -45,5 +46,10 @@ export class PlaylistComponent implements OnInit {
   reset() {
     this.currentPlaylist =
       { channelTitle: '', description: '', publishedAt: '', thumbnails: {}, title: ''};
+  }
+
+  level() {
+    this.playlistService.getLevel()
+      .subscribe(res => console.log(res));
   }
 }
