@@ -1,2 +1,18 @@
-<h1>Test</h1>
+<div class="list-grid">
+  <mat-card *ngFor="let post of post">
+    <mat-card-header>
+      <mat-card-title><h2>Tweet that thang!</h2></mat-card-title>
+      <mat-card-subtitle>User: {{post.username}}</mat-card-subtitle>
+    </mat-card-header>
+    <img src="https://source.unsplash.com/700x300/?people,laughing,person"/>
+    <mat-card-content>
+      <h3>{{post.content}}</h3>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary">Select<mat-icon>touch_app</mat-icon></button>
+      <button mat-raised-button color="accent">Delete<mat-icon>delete</mat-icon></button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
 <pre>{{post | json}}</pre>
