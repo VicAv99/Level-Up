@@ -9,6 +9,6 @@ export class AppComponent {
   title = 'VenturBook App';
   links = [
     { path: '/home', icon: 'home', label: 'Home' },
-    { path: '/posts', icon: 'loyalty', label: 'Posts' },
+    { path: '/posts', icon: 'loyalty', label: 'Posts' }
   ];
 }

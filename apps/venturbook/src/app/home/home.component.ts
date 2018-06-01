@@ -17,7 +17,8 @@ export class HomeComponent implements OnInit {
   }
 
   getPosts() {
-    this.postService.allPosts()
+    this.postService
+      .allPosts()
       .subscribe(res => this.posts = res);
   }
 

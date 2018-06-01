@@ -31,9 +31,9 @@ a.ventur {
 }
 
 .nav-link {
-  color: rgba(0,0,0,.54);
+  color: rgba(0, 0, 0, .54);
   display: flex;
-  align-items:center;
+  align-items: center;
   padding-top: 5px;
   padding-bottom: 5px;
 }

@@ -18,13 +18,16 @@ export class PostsComponent implements OnInit {
   }
 
   getAllPosts() {
-    this.postService.allPosts()
+    this.postService
+      .allPosts()
       .subscribe(posts => this.posts = posts);
   }
 
   selectPost(post) {
     this.currentPost = post;
-    this.postService.post(post).subscribe(res => console.log("RES", res));
+    this.postService
+      .post(post)
+      .subscribe(res => console.log("RES", res));
   }
 
   savePost(post) {
@@ -32,7 +35,8 @@ export class PostsComponent implements OnInit {
   }
 
   createPost(post) {
-    this.postService.create(post)
+    this.postService
+      .create(post)
       .subscribe(posted => {
         this.posts.push(post)
         this.reset();
@@ -40,7 +44,8 @@ export class PostsComponent implements OnInit {
   }
 
   updatePost(post) {
-    this.postService.update(post)
+    this.postService
+      .update(post)
       .subscribe(res => {
         this.getAllPosts();
         this.reset();
@@ -48,7 +53,8 @@ export class PostsComponent implements OnInit {
   }
 
   deletePost(post) {
-    this.postService.delete(post.id)
+    this.postService
+      .delete(post.id)
       .subscribe(posted => this.getAllPosts());
   }
 
@@ -64,5 +70,4 @@ export class PostsComponent implements OnInit {
       comments: []
     }
   }
-
 }
