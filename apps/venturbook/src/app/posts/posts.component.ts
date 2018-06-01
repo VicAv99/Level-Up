@@ -22,11 +22,12 @@ export class PostsComponent implements OnInit {
       .subscribe(posts => this.posts = posts);
   }
 
-  selectedPost(post) {
+  selectPost(post) {
     this.currentPost = post;
+    this.postService.post(post).subscribe(res => console.log("RES", res));
   }
 
-  saved(post) {
+  savePost(post) {
     !post.id ? this.createPost(post) : this.updatePost(post);
   }
 
@@ -35,7 +36,7 @@ export class PostsComponent implements OnInit {
       .subscribe(posted => {
         this.posts.push(post)
         this.reset();
-      });
+    });
   }
 
   updatePost(post) {
@@ -43,7 +44,7 @@ export class PostsComponent implements OnInit {
       .subscribe(res => {
         this.getAllPosts();
         this.reset();
-      });
+    });
   }
 
   deletePost(post) {

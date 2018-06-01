@@ -21,7 +21,12 @@ mat-card-content p {
 .home-card {
   grid-column: 2/3;
   grid-row: 2;
-  margin-bottom: 25%;
+  margin-bottom: 10%;
+}
+
+.list {
+  grid-column: 2/3;
+  grid-row: 3;
 }
 
 .mute {

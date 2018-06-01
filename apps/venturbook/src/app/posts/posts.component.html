@@ -1,12 +1,12 @@
 <div class="post-grid">
   <div class="post-list">
     <app-post-list [posts]="posts"
-                   (selected)="selectedPost($event)"
+                   (selected)="selectPost($event)"
                    (deleted)="deletePost($event)"></app-post-list>
   </div>
   <div class="post-detail">
     <app-post-detail [original]="currentPost"
-                     (saved)="saved($event)"
+                     (saved)="savePost($event)"
                      (cancelled)="cancel($event)"></app-post-detail>
   </div>
 </div>

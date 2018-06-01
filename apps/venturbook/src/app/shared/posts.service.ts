@@ -12,7 +12,12 @@ export class PostsService {
   constructor(private http: HttpClient) { }
 
   allPosts() {
-    return this.http.get<Post>(`${HERO}`)
+    return this.http.get<Post[]>(`${HERO}`)
+      .pipe(map(res => res));
+  }
+
+  post(post: Post) {
+    return this.http.get<Post>(`${HERO}/${post.id}`)
       .pipe(map(res => res));
   }
 

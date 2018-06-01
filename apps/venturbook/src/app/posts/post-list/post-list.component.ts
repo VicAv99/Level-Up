@@ -7,7 +7,8 @@ import { Post } from '../../shared/post';
   styleUrls: ['./post-list.component.css']
 })
 export class PostListComponent {
-  @Input() posts;
+  @Input() posts: Post[];
+  @Input() readonly = false;
   @Output() selected = new EventEmitter();
   @Output() deleted = new EventEmitter();
 }
