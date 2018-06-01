@@ -1,3 +1,21 @@
-<p>
-  post-detail works!
-</p>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      <h2>Edit</h2>
+    </mat-card-title>
+  </mat-card-header>
+  <form (submit)="saved.emit(originalPost)">
+    <mat-card-content>
+      <mat-input-container>
+        <input matInput placeholder="Username" [(ngModel)]="originalPost.username" type="text" name="username">
+      </mat-input-container>
+      <mat-input-container>
+        <input matInput placeholder="Content" [(ngModel)]="originalPost.content" type="text" name="content">
+      </mat-input-container>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button type="submit" color="primary">Save</button>
+      <button  mat-raised-button type="button" color="accent" (click)="cancelled.emit(originalPost)">Cancel</button>
+    </mat-card-actions>
+  </form>
+</mat-card>

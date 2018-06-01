@@ -8,7 +8,7 @@ import { Post } from '../shared/post';
   styleUrls: ['./posts.component.css']
 })
 export class PostsComponent implements OnInit {
-  post: Post[];
+  posts: Post[];
   currentPost: Post;
 
   constructor(private postService: PostsService) { }
@@ -18,8 +18,50 @@ export class PostsComponent implements OnInit {
   }
 
   getAllPosts() {
-    this.postService.getPostsHeroku()
-      .subscribe(post => this.post = post);
+    this.postService.allPosts()
+      .subscribe(posts => this.posts = posts);
+  }
+
+  selectedPost(post) {
+    this.currentPost = post;
+  }
+
+  saved(post) {
+    !post.id ? this.createPost(post) : this.updatePost(post);
+  }
+
+  createPost(post) {
+    this.postService.create(post)
+      .subscribe(posted => {
+        this.posts.push(post)
+        this.reset();
+      });
+  }
+
+  updatePost(post) {
+    this.postService.update(post)
+      .subscribe(res => {
+        this.getAllPosts();
+        this.reset();
+      });
+  }
+
+  deletePost(post) {
+    this.postService.delete(post.id)
+      .subscribe(posted => this.getAllPosts());
+  }
+
+  cancel(post) {
+    this.reset();
+  }
+
+  reset() {
+    this.currentPost = {
+      id: null,
+      content: '',
+      username: '',
+      comments: []
+    }
   }
 
 }

@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NxModule } from '@nrwl/nx';
 import { HttpClient, HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
 import { AppMaterialModule } from "@levelUp/app-material.module";
 
 import { PostsService } from './shared/posts.service';
@@ -19,6 +20,7 @@ import { HomeComponent } from './home/home.component';
     NxModule.forRoot(),
     HttpClientModule,
     AppRoutingModule,
+    FormsModule,
     AppMaterialModule
   ],
   declarations: [AppComponent, PostsComponent, PostListComponent, PostDetailComponent, HomeComponent],

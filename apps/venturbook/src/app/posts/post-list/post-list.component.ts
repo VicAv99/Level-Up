@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { Post } from '../../shared/post';
 
 @Component({
@@ -7,5 +7,7 @@ import { Post } from '../../shared/post';
   styleUrls: ['./post-list.component.css']
 })
 export class PostListComponent {
-  @Input() post;
+  @Input() posts;
+  @Output() selected = new EventEmitter();
+  @Output() deleted = new EventEmitter();
 }
