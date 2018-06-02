@@ -1,7 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Bangers');
+
 :host {
   display: flex;
   flex-direction: column;
   flex: 1;
+}
+
+img {
+  margin-top: 10px;
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
 }
 
 mat-toolbar {
@@ -13,16 +22,12 @@ mat-sidenav {
 }
 
 span {
-  font-size: 25px;
+  font-family: Bangers, Roboto, sans-serif;
+  font-size: 42px;
 }
 
 span:hover {
   cursor: pointer;
-}
-
-a.ventur {
-  color: white;
-  text-decoration: none;
 }
 
 .mat-sidenav-container {
