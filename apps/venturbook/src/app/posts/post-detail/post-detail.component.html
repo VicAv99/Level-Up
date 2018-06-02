@@ -16,9 +16,15 @@
     </mat-card-content>
     <mat-card-actions>
       <button mat-raised-button type="submit" color="primary"
-              [disabled]="!form.valid">Post
+              [disabled]="!form.valid" *ngIf="!originalPost.id else update">Post
         <mat-icon>loyalty</mat-icon>
       </button>
+      <ng-template #update>
+        <button mat-raised-button type="submit" color="primary"
+                *ngIf="originalPost.id">Update
+          <mat-icon>loyalty</mat-icon>
+        </button>
+      </ng-template>
       <button mat-raised-button type="button" color="accent"
               (click)="cancelled.emit(originalPost)"
               *ngIf="form.valid">Cancel
