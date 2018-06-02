@@ -9,7 +9,7 @@
       <h4>{{post.content}}</h4>
     </mat-card-content>
     <mat-card-actions>
-      <div *ngIf="!readonly">
+      <div class="buttons" *ngIf="!readonly">
         <button mat-raised-button color="primary" (click)="selected.emit(post)">Select<mat-icon>touch_app</mat-icon></button>
         <button mat-raised-button color="accent" (click)="deleted.emit(post)">Delete<mat-icon>delete</mat-icon></button>
       </div>
