@@ -1,7 +1,8 @@
 <mat-card>
   <mat-card-header>
     <mat-card-title>
-      <h2>Edit</h2>
+      <h1 *ngIf="!originalPost.id">Create</h1>
+      <h1 *ngIf="originalPost.id">Editing {{originalPost.username}}</h1>
     </mat-card-title>
   </mat-card-header>
   <form (submit)="saved.emit(originalPost)">
@@ -14,8 +15,18 @@
       </mat-input-container>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-raised-button type="submit" color="primary">Save</button>
-      <button  mat-raised-button type="button" color="accent" (click)="cancelled.emit(originalPost)">Cancel</button>
+      <button mat-raised-button type="submit" color="primary">
+        Post
+        <mat-icon>
+          loyalty
+        </mat-icon>
+      </button>
+      <button  mat-raised-button type="button" color="accent" (click)="cancelled.emit(originalPost)">
+        Cancel
+        <mat-icon>
+          clear
+        </mat-icon>
+      </button>
     </mat-card-actions>
   </form>
 </mat-card>

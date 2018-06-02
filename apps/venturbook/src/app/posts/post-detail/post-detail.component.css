@@ -1,14 +1,32 @@
+/* mat-card-actions:not(path):not(g) {
+	color:                    hsla(210, 100%, 100%, 0.9) !important;
+	background:               hsla(210, 100%,  50%, 0.2) !important;
+	outline:    solid 0.25rem hsla(210, 100%, 100%, 0.5) !important;
+
+	box-shadow: none !important;
+} */
+
 mat-card {
-  padding-top: 0;
-  padding-bottom: 5px;
+  padding-top: 5px;
+  height: 40%;
+}
+
+mat-card-header h1 {
+  margin-top: 5px;
 }
 
 mat-card-content {
   display: flex;
   flex-direction: column;
+  margin: 0;
 }
 
 mat-input-container {
   width: 90%;
+  margin-left: 15px;
+}
+
+mat-card-actions {
+  padding-top: 0;
   margin-left: 15px;
 }
