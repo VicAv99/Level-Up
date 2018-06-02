@@ -30,13 +30,8 @@ span:hover {
   cursor: pointer;
 }
 
-.mat-sidenav-container {
-  background: whitesmoke;
-  flex: 1;
-}
-
 .nav-link {
-  color: rgba(0, 0, 0, .54);
+  color: rgba(206, 35, 35, 0.54);
   display: flex;
   align-items: center;
   padding-top: 5px;
