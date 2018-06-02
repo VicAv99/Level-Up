@@ -1,8 +1,11 @@
 <div class="list-grid">
-  <mat-card *ngFor="let post of posts">
+  <mat-card *ngFor="let post of posts"  (click)="selected.emit(post)">
     <mat-card-header>
       <mat-card-title><h2>Tweet that thang!</h2></mat-card-title>
       <mat-card-subtitle>User: {{post.username}}</mat-card-subtitle>
+      <button mat-icon-button color="accent" (click)="deleted.emit(post)">
+        <mat-icon>clear</mat-icon>
+      </button>
     </mat-card-header>
     <img src="https://source.unsplash.com/700x300/?people,laughing,person"/>
     <mat-card-content>
@@ -10,8 +13,6 @@
     </mat-card-content>
     <mat-card-actions>
       <div class="buttons" *ngIf="!readonly">
-        <button mat-raised-button color="primary" (click)="selected.emit(post)">Select<mat-icon>touch_app</mat-icon></button>
-        <button mat-raised-button color="accent" (click)="deleted.emit(post)">Delete<mat-icon>delete</mat-icon></button>
       </div>
     </mat-card-actions>
   </mat-card>

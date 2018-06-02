@@ -34,6 +34,10 @@ button.right-button {
   margin-left: 10px;
 }
 
+mat-card-header {
+  justify-content: center;
+}
+
 .list-grid {
   display: grid;
   grid-template-columns: repeat(1, 1fr);

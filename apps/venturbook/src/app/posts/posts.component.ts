@@ -15,51 +15,18 @@ export class PostsComponent implements OnInit {
 
   ngOnInit() {
     this.getAllPosts();
+    this.reset();
   }
 
   getAllPosts() {
-    this.postService
-      .allPosts()
+    this.postService.allPosts()
       .subscribe(posts => this.posts = posts);
   }
 
   selectPost(post) {
     this.currentPost = post;
-    this.postService
-      .post(post)
+    this.postService.post(post)
       .subscribe(res => console.log("RES", res));
-  }
-
-  savePost(post) {
-    !post.id ? this.createPost(post) : this.updatePost(post);
-  }
-
-  createPost(post) {
-    this.postService
-      .create(post)
-      .subscribe(posted => {
-        this.posts.push(post)
-        this.reset();
-    });
-  }
-
-  updatePost(post) {
-    this.postService
-      .update(post)
-      .subscribe(res => {
-        this.getAllPosts();
-        this.reset();
-    });
-  }
-
-  deletePost(post) {
-    this.postService
-      .delete(post.id)
-      .subscribe(posted => this.getAllPosts());
-  }
-
-  cancel(post) {
-    this.reset();
   }
 
   reset() {
@@ -69,5 +36,38 @@ export class PostsComponent implements OnInit {
       username: '',
       comments: []
     }
+  }
+
+  cancel(post) {
+    this.reset();
+  }
+
+  savePost(post) {
+    !post.id ? this.createPost(post) : this.updatePost(post);
+  }
+
+  createPost(post) {
+    this.postService.create(post)
+      .subscribe(posted => {
+        this.posts.push(post);
+        this.getAllPosts();
+        this.reset();
+    });
+  }
+
+  updatePost(post) {
+    this.postService.update(post)
+      .subscribe(res => {
+        this.getAllPosts();
+        this.reset();
+    });
+  }
+
+  deletePost(post) {
+    this.postService.delete(post.id)
+      .subscribe(posted => {
+        this.getAllPosts()
+        this.reset()
+    });
   }
 }
