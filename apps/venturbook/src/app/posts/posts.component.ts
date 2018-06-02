@@ -66,8 +66,8 @@ export class PostsComponent implements OnInit {
   deletePost(post) {
     this.postService.delete(post.id)
       .subscribe(posted => {
-        this.getAllPosts()
-        this.reset()
+        this.getAllPosts();
+        this.reset();
     });
   }
 }

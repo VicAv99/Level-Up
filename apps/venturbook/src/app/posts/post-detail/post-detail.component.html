@@ -1,31 +1,28 @@
 <mat-card>
   <mat-card-header>
     <mat-card-title>
-      <h1 *ngIf="!originalPost.id">Create</h1>
+      <h1 *ngIf="!originalPost.id">Create A Post</h1>
       <h1 *ngIf="originalPost.id">Editing {{originalPost.username}}</h1>
     </mat-card-title>
   </mat-card-header>
-  <form (submit)="saved.emit(originalPost)">
+  <form (submit)="saved.emit(originalPost)" #form="ngForm">
     <mat-card-content>
       <mat-input-container>
-        <input matInput placeholder="Username" [(ngModel)]="originalPost.username" type="text" name="username">
+        <input matInput placeholder="Username" [(ngModel)]="originalPost.username" type="text" name="username" required>
       </mat-input-container>
       <mat-input-container>
-        <input matInput placeholder="Content" [(ngModel)]="originalPost.content" type="text" name="content">
+        <input matInput placeholder="Content" [(ngModel)]="originalPost.content" type="text" name="content" required>
       </mat-input-container>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-raised-button type="submit" color="primary">
-        Post
-        <mat-icon>
-          loyalty
-        </mat-icon>
+      <button mat-raised-button type="submit" color="primary"
+              [disabled]="!form.valid">Post
+        <mat-icon>loyalty</mat-icon>
       </button>
-      <button  mat-raised-button type="button" color="accent" (click)="cancelled.emit(originalPost)">
-        Cancel
-        <mat-icon>
-          clear
-        </mat-icon>
+      <button mat-raised-button type="button" color="accent"
+              (click)="cancelled.emit(originalPost)"
+              *ngIf="form.valid">Cancel
+        <mat-icon>clear</mat-icon>
       </button>
     </mat-card-actions>
   </form>
