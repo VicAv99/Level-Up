@@ -24,13 +24,13 @@ a {
 
 .home-card {
   grid-column: 3/6;
-  grid-row: 2;
+  grid-row: 1;
   margin-bottom: 10%;
 }
 
 .list {
   grid-column: 3/6;
-  grid-row: 3;
+  grid-row: 2;
 }
 
 .mute {
@@ -41,13 +41,13 @@ a {
 @media screen and (max-width: 1380px) {
   .home-card {
     grid-column: 2/7;
-    grid-row: 2;
+    grid-row: 1;
     margin-bottom: 5%;
   }
 
   .list {
     grid-column: 2/7;
-    grid-row: 3;
+    grid-row: 2;
   }
 }
 
