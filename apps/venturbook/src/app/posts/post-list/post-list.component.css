@@ -35,12 +35,7 @@ button mat-icon:hover {
   grid-auto-rows: minmax(100px, auto);
 }
 
-@media screen and (max-width: 1380px) {
-  /* mat-card-header {
-    justify-content: center;
-  }
-
-  mat-card-content h4.content {
-    align-content: center
-  } */
+.side {
+  width: 80%;
+  margin-left: 25px;
 }

@@ -12,10 +12,8 @@
       <h3 class="content">{{post.content}}</h3>
       <div *ngIf="!readonly">
         <hr>
-        <h3>Comments</h3>
-        <div *ngFor="let c of post.comments">
-          <h4>{{c.responding_user}}:</h4>
-          <p>{{c.response}}</p>
+        <div class="side" *ngFor="let c of post.comments">
+          <h4>{{c.responding_user}}: {{c.response}}</h4>
         </div>
       </div>
     </mat-card-content>
