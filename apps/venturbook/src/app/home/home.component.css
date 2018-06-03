@@ -10,6 +10,11 @@ mat-card-content p {
   margin-left: 10px;
 }
 
+a {
+  text-decoration: none;
+  color: rgba(105, 105, 105, 0.37);
+}
+
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
