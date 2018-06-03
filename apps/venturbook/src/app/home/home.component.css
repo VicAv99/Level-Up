@@ -17,23 +17,49 @@ a {
 
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(7, 1fr);
   grid-gap: 10px;
   grid-auto-rows: minmax(100px, auto);
 }
 
 .home-card {
-  grid-column: 2/3;
+  grid-column: 3/6;
   grid-row: 2;
   margin-bottom: 10%;
 }
 
 .list {
-  grid-column: 2/3;
+  grid-column: 3/6;
   grid-row: 3;
 }
 
 .mute {
   color: rgba(0, 0, 0, 0.555);
   margin-left: 20px !important;
+}
+
+@media screen and (max-width: 1380px) {
+  .home-card {
+    grid-column: 2/7;
+    grid-row: 2;
+    margin-bottom: 5%;
+  }
+
+  .list {
+    grid-column: 2/7;
+    grid-row: 3;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .home-card {
+    grid-column: 1/8;
+    grid-row: 2;
+    margin-bottom: 5%;
+  }
+
+  .list {
+    grid-column: 1/8;
+    grid-row: 3;
+  }
 }

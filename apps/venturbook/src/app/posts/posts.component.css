@@ -31,3 +31,15 @@
     grid-row: 1;
   }
 }
+
+@media screen and (max-width: 800px) {
+  .post-list {
+    grid-column: 1/8;
+    grid-row: 2;
+  }
+
+  .post-detail {
+    grid-column: 1/8;
+    grid-row: 1;
+  }
+}
