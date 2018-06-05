@@ -43,3 +43,4 @@ Thumbs.db
 
 /apps/youtube-api/src/api.ts
 /apps/twitter-api/src/env.ts
+/apps/spotify-api/src/app/shared/access.ts
