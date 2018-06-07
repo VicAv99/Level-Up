@@ -1,3 +1,42 @@
-<p>
-  search works!
-</p>
+<div class="wrapper">
+  <div class="home-card">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>
+          <h1>Need Music?</h1>
+        </mat-card-title>
+        <mat-card-subtitle>
+          ngSpot
+        </mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <form>
+          <p>Use the ngSpot app to browse music and find cool songs from Spotify!</p>
+          <mat-form-field>
+            <input matInput type="text" name="search" [(ngModel)]="searchStr" (keyup)="searchMusic()" placeholder="Search Music...">
+          </mat-form-field>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+<div class="artist-wrapper">
+  <div class="artist-card">
+    <mat-card>
+      <mat-grid-list cols="4" rowHeight="2:1">
+        <mat-grid-tile *ngFor="let res of searchRes">
+          <div class="left">
+            <h3><a routerLink="/artist/{{res.id}}">{{res.name}}</a></h3>
+          </div>
+          <div class="right">
+            <strong>Genre: </strong>
+            <span *ngFor="let genre of res.genres">
+              {{genre}},
+            </span>
+          </div>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </mat-card>
+  </div>
+</div>

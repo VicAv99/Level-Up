@@ -5,8 +5,6 @@ import { access_token } from "../shared/access";
 import { map } from 'rxjs/operators';
 
 const BASE_URL = 'https://api.spotify.com/v1/';
-// tslint:disable-next-line:max-line-length
-
 
 @Injectable()
 export class SpotifyService {

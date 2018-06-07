@@ -1,3 +1,41 @@
-<p>
-  album works!
-</p>
+<div class="wrapper" *ngIf="album">
+  <div class="home-card">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>
+          <h4 *ngIf="album.images.length > 0">
+            <span *ngFor="let artist of album.artists">
+              {{artist.name}}
+            </span>
+          </h4>
+        </mat-card-title>
+        <mat-card-subtitle>ngSpot</mat-card-subtitle>
+      </mat-card-header>
+      <img [src]="album.images[0].url"/>
+      <mat-card-content>
+        <p>{{album.name}}</p>
+        <p class="mute">Release Date: {{album.release_date}}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="accent">
+          <a [href]="album.external_urls.spotify">View In Spotify!</a>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <div class="tracks-card">
+    <mat-card>
+      <mat-card-content>
+        <mat-list>
+          <mat-list-item *ngFor="let track of album.tracks.items">
+            <h5>{{track.track_number}} - {{track.name}}</h5>
+            <a [href]="track.preview_url" target="_blank">Preview Track</a>
+          </mat-list-item>
+        </mat-list>
+      </mat-card-content>
+      <mat-card-actions>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
