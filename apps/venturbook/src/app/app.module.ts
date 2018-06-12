@@ -18,6 +18,8 @@ import { HomeComponent } from './home/home.component';
 import { PostsComponent } from './posts/posts.component';
 import { PostDetailComponent } from './posts/post-detail/post-detail.component';
 import { PostListComponent } from './posts/post-list/post-list.component';
+import { CommentsComponent } from './comments/comments.component';
+import { CommentsService } from './shared/comments.service';
 
 @NgModule({
   imports: [
@@ -28,8 +30,8 @@ import { PostListComponent } from './posts/post-list/post-list.component';
     FormsModule,
     AppMaterialModule
   ],
-  declarations: [AppComponent, HomeComponent, PostsComponent, PostDetailComponent, PostListComponent],
+  declarations: [AppComponent, HomeComponent, PostsComponent, PostDetailComponent, PostListComponent, CommentsComponent],
   bootstrap: [AppComponent],
-  providers: [PostsService]
+  providers: [PostsService, CommentsService]
 })
 export class AppModule {}

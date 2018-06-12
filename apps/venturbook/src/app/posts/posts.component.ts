@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { PostsService } from '../shared/posts.service';
 import { Post } from '../shared/post';
+import { Comment } from "../shared/comment";
+import { CommentsService } from '../shared/comments.service';
 
 @Component({
   selector: 'app-posts',
@@ -10,13 +12,19 @@ import { Post } from '../shared/post';
 export class PostsComponent implements OnInit {
   posts: Post[];
   currentPost: Post;
+  // comments: Comment[];
 
-  constructor(private postService: PostsService) { }
+  constructor(private postService: PostsService,
+              private commentsService: CommentsService) { }
 
   ngOnInit() {
     this.getAllPosts();
     this.reset();
   }
+
+  // getAllComments() {
+  //   this.commentsService.getAllComments().subscribe(res => this.comments = res);
+  // }
 
   getAllPosts() {
     this.postService.allPosts()
