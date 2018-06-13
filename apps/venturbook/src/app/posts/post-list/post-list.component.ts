@@ -12,7 +12,7 @@ export class PostListComponent implements OnInit {
   @Input() readonly = false;
   @Output() selected = new EventEmitter();
   @Output() deleted = new EventEmitter();
-  // @Input() comments: Comment[];
+  @Input() comments: Comment[];
 
   constructor(private commentsService: CommentsService) { }
 

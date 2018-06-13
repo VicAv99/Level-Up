@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
-import { RequestOptions, Request, RequestMethod, RequestOptionsArgs } from '@angular/http';
 import { access_token } from "../shared/access";
 import { map } from 'rxjs/operators';
 

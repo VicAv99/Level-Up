@@ -12,7 +12,7 @@ import { CommentsService } from '../shared/comments.service';
 export class PostsComponent implements OnInit {
   posts: Post[];
   currentPost: Post;
-  // comments: Comment[];
+  comments: Comment[];
 
   constructor(private postService: PostsService,
               private commentsService: CommentsService) { }
@@ -22,9 +22,9 @@ export class PostsComponent implements OnInit {
     this.reset();
   }
 
-  // getAllComments() {
-  //   this.commentsService.getAllComments().subscribe(res => this.comments = res);
-  // }
+  getAllComments() {
+    this.commentsService.getAllComments().subscribe(res => this.comments = res);
+  }
 
   getAllPosts() {
     this.postService.allPosts()
