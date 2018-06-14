@@ -9,7 +9,7 @@ export class AppComponent implements OnInit {
   title = 'OMDB Mobies';
   links = [
     { path: '/home', icon: 'home', label: 'Home' },
-    { path: '/movie-search', icon: 'loyalty', label: 'Movie Search' },
+    { path: '/movie', icon: 'loyalty', label: 'Movie Search' },
   ];
   constructor() {}
 

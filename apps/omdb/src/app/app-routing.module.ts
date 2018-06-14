@@ -2,12 +2,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { MovieSearchComponent } from './movie-search/movie-search.component';
+import { MovieComponent } from './movie/movie.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
-  { path: 'movie-search', component: MovieSearchComponent },
+  { path: 'movie', component: MovieComponent },
   { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 
