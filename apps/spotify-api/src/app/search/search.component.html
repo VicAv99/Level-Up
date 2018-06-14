@@ -19,24 +19,20 @@
       </mat-card-content>
     </mat-card>
   </div>
-</div>
 
-<div class="artist-wrapper">
   <div class="artist-card">
     <mat-card *ngIf="searchRes">
-      <mat-grid-list cols="4" rowHeight="2:1">
-        <mat-grid-tile *ngFor="let res of searchRes">
-          <div class="left">
-            <h3><a routerLink="/artist/{{res.id}}">{{res.name}}</a></h3>
-          </div>
-          <div class="right">
+      <mat-list>
+        <mat-list-item *ngFor="let res of searchRes">
+          <h3><a routerLink="/artist/{{res.id}}">{{res.name}}</a></h3>
+          <div *ngIf="res.genres.length > 0">
             <strong>Genre: </strong>
             <span *ngFor="let genre of res.genres">
               {{genre}},
             </span>
           </div>
-        </mat-grid-tile>
-      </mat-grid-list>
+        </mat-list-item>
+      </mat-list>
     </mat-card>
   </div>
 </div>
