@@ -11,6 +11,8 @@ import { OmdbService } from './shared/omdb.service';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { MovieComponent } from './movie/movie.component';
+import { MovieResultComponent } from './movie/movie-result/movie-result.component';
+import { MovieSearchComponent } from './movie/movie-search/movie-search.component';
 
 @NgModule({
   imports: [
@@ -24,7 +26,9 @@ import { MovieComponent } from './movie/movie.component';
   declarations: [
     AppComponent,
     HomeComponent,
-    MovieComponent
+    MovieComponent,
+    MovieResultComponent,
+    MovieSearchComponent
   ],
   bootstrap: [AppComponent],
   providers: [OmdbService]

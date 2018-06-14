@@ -1,0 +1,32 @@
+mat-card {
+  padding: 0 0 35px 0;
+}
+
+mat-card-header {
+  margin: auto;
+  width: 80%;
+}
+
+mat-card-subtitle {
+  margin-left: 15px;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+mat-card-content {
+  width: 80%;
+  margin: auto;
+  padding: 15px 0;
+}
+
+.list-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
