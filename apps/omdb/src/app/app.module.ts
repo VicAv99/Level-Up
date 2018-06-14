@@ -1,15 +1,31 @@
 import { NgModule } from '@angular/core';
-import { AppComponent } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NxModule } from '@nrwl/nx';
+import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
+import { AppMaterialModule } from '@levelUp/app-material.module';
+
+import { OmdbService } from './shared/omdb.service';
+
+import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { MovieSearchComponent } from './movie-search/movie-search.component';
-import { OmdbService } from './shared/omdb.service';
-import { AppRoutingModule } from './/app-routing.module';
 
 @NgModule({
-  imports: [BrowserModule, NxModule.forRoot(), AppRoutingModule],
-  declarations: [AppComponent, HomeComponent, MovieSearchComponent],
+  imports: [
+    BrowserModule,
+    NxModule.forRoot(),
+    HttpClientModule,
+    AppRoutingModule,
+    FormsModule,
+    AppMaterialModule
+  ],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    MovieSearchComponent
+  ],
   bootstrap: [AppComponent],
   providers: [OmdbService]
 })
