@@ -23,7 +23,7 @@
 
 <div class="artist-wrapper">
   <div class="artist-card">
-    <mat-card>
+    <mat-card *ngIf="searchRes">
       <mat-grid-list cols="4" rowHeight="2:1">
         <mat-grid-tile *ngFor="let res of searchRes">
           <div class="left">

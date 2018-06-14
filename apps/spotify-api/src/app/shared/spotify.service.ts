@@ -1,19 +1,25 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
-import { access_token } from "../shared/access";
 import { map } from 'rxjs/operators';
+import { ActivatedRoute } from '@angular/router';
 
 const BASE_URL = 'https://api.spotify.com/v1/';
 
 @Injectable()
 export class SpotifyService {
+  access_token;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private route: ActivatedRoute) { }
 
   private buildHeaders() {
     let headers = new HttpHeaders();
-    headers = headers.append('Authorization', `Bearer ${access_token}`);
+    headers = headers.append('Authorization', `Bearer ${this.access_token}`);
     return headers;
+  }
+
+  setToken(accessToken: string) {
+    this.access_token = accessToken;
+    console.log('ACCESS', accessToken);
   }
 
   searchMusic(str: string, type = 'artist') {

@@ -7,8 +7,9 @@ import { ArtistComponent } from './artist/artist.component';
 import { AlbumComponent } from './album/album.component';
 
 const routes: Routes = [
-  { path: '', component: SearchComponent },
-  { path: 'about', component: LoginComponent },
+  { path: '', component: LoginComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'search', component: SearchComponent },
   { path: 'artist/:id', component: ArtistComponent },
   { path: 'album/:id', component: AlbumComponent },
   { path: '**', redirectTo: '', pathMatch: 'full' }

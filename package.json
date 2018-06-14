@@ -20,6 +20,7 @@
     "deploy:starwars": "ng build -a starwars-api && cp ./dist/apps/starwars-api/index.html ./dist/apps/starwars-api/200.html && surge ./dist/apps/starwars-api https://starwars-api-app.surge.sh",
     "deploy:poke": "ng build -a poke-api && cp ./dist/apps/poke-api/index.html ./dist/apps/poke-api/200.html && surge ./dist/apps/poke-api https://poke-app.surge.sh",
     "deploy:venturbook": "ng build -a venturbook && cp ./dist/apps/venturbook/index.html ./dist/apps/venturbook/200.html && surge ./dist/apps/venturbook https://venturbook.surge.sh",
+    "deploy:spotify": "ng build -a spotify-api && cp ./dist/apps/spotify-api/index.html ./dist/apps/spotify-api/200.html && surge ./dist/apps/spotify-api https://ng-spot.surge.sh",
     "test": "ng test",
     "lint": "./node_modules/.bin/nx lint && ng lint",
     "e2e": "ng e2e",

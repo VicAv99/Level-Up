@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -8,10 +10,11 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
   title = 'ngSpot';
   links = [
-    { path: '/', icon: 'home', label: 'Home'},
-    { path: '/login', icon: 'folder_shared', label: 'Login' },
+    { path: '/login', icon: 'home', label: 'Home' },
+    { path: '/search', icon: 'loyalty', label: 'Search Music' },
   ];
-  constructor() {}
+  constructor(private route: ActivatedRoute, private http: HttpClient) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 }
