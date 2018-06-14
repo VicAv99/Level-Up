@@ -7,10 +7,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 VenturPlex Challenge to create an app (Simple Master Detail View) a day for 30 days. Using 30 different API's in an hour for each.
 
 > Links to apps
-> - [YouTube API](http://youtube-api-app.surge.sh/) app
+> - [YouTube API](https://youtube-api-app.surge.sh/) app
 > - [Twitter API](http://twitter-app.surge.sh) app
-> - [StarWars API](http://starwars-api-app.surge.sh) app
-> - [Poke API](http://poke-app.surge.sh) app
+> - [StarWars API](https://starwars-api-app.surge.sh) app
+> - [Poke API](https://poke-app.surge.sh) app
 > - [ngSpot](https://ng-spot.surge.sh) app
 > - [iTunes Search](https://itunes-search-app.surge.sh) app
 
