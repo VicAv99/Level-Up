@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) using [Nrwl Nx](https://nrwl.io/nx).
 
-# 30 apps in 30 days
+# 30 apps
 
 VenturPlex Challenge to create an app (Simple Master Detail View) a day for 30 days. Using 30 different API's in an hour for each.
 
@@ -11,6 +11,8 @@ VenturPlex Challenge to create an app (Simple Master Detail View) a day for 30 d
 > - [Twitter API](http://twitter-app.surge.sh) app
 > - [StarWars API](http://starwars-api-app.surge.sh) app
 > - [Poke API](http://poke-app.surge.sh) app
+> - [ngSpot](https://ng-spot.surge.sh) app
+> - [iTunes Search](https://itunes-search-app.surge.sh) app
 
 > Bonus apps
 > - [VenturBook](http://venturbook.surge.sh) app

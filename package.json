@@ -21,6 +21,7 @@
     "deploy:poke": "ng build -a poke-api && cp ./dist/apps/poke-api/index.html ./dist/apps/poke-api/200.html && surge ./dist/apps/poke-api https://poke-app.surge.sh",
     "deploy:venturbook": "ng build -a venturbook && cp ./dist/apps/venturbook/index.html ./dist/apps/venturbook/200.html && surge ./dist/apps/venturbook https://venturbook.surge.sh",
     "deploy:spotify": "ng build -a spotify-api && cp ./dist/apps/spotify-api/index.html ./dist/apps/spotify-api/200.html && surge ./dist/apps/spotify-api https://ng-spot.surge.sh",
+    "deploy:itunes": "ng build -a itunes-api && cp ./dist/apps/itunes-api/index.html ./dist/apps/itunes-api/200.html && surge ./dist/apps/itunes-api https://itunes-search-app.surge.sh",
     "test": "ng test",
     "lint": "./node_modules/.bin/nx lint && ng lint",
     "e2e": "ng e2e",
