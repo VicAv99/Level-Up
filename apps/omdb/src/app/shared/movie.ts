@@ -1,4 +1,4 @@
-import { Ratings } from "./ratings";
+import { Rating } from "./rating";
 
 export interface Movie {
   Title: string;
@@ -10,7 +10,7 @@ export interface Movie {
   Plot: string;
   Awards: string;
   Poster: string;
-  Ratings: Ratings[];
+  Ratings: Rating[];
   imdbRating: string;
   imdbVotes: string;
   DVD: string;
