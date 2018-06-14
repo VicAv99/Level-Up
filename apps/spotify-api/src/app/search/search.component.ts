@@ -12,16 +12,21 @@ export class SearchComponent implements OnInit {
   searchStr: string;
   searchRes: Artist[];
 
-  constructor(private spotifyService: SpotifyService, private route: ActivatedRoute) { }
+  constructor(
+    private spotifyService: SpotifyService,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit() {
-    const accessToken = this.route.snapshot.fragment.split('access_token=')[1].split('&token')[0];
-      this.spotifyService.setToken(accessToken);
+    const accessToken = this.route.snapshot.fragment
+      .split('access_token=')[1]
+      .split('&token')[0];
+    this.spotifyService.setToken(accessToken);
   }
 
   searchMusic() {
-    this.spotifyService.searchMusic(this.searchStr)
-      .subscribe(res => this.searchRes = res.artists.items);
+    this.spotifyService
+      .searchMusic(this.searchStr)
+      .subscribe(res => (this.searchRes = res.artists.items));
   }
-
 }
