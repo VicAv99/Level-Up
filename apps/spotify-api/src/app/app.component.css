@@ -20,6 +20,11 @@ span:hover {
   cursor: pointer;
 }
 
+img {
+  height: 95px;
+  width: 95px;
+}
+
 a.ventur {
   color: white;
   text-decoration: none;
