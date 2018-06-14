@@ -8,10 +8,34 @@
         <mat-card-subtitle>search below</mat-card-subtitle>
       </mat-card-header>
       <mat-card-content>
-        <mat-form-field>
-          <input matInput type="text" placeholder="Search..." name="search">
-        </mat-form-field>
+        <form action="">
+          <mat-form-field>
+            <input matInput type="text" [(ngModel)]="searchStr" placeholder="Search..." name="search" (keyup)="search()">
+          </mat-form-field>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div *ngIf="searchRes" class="itunes-card">
+    <mat-card *ngFor="let res of searchRes.results">
+      <mat-card-header>
+        <mat-card-title>
+          <h1>{{res.artistName}}</h1>
+        </mat-card-title>
+        <mat-card-subtitle>
+          <p>{{res.kind}}, {{res.primaryGenreName}}</p>
+          <p>Release: {{res.releaseDate | date}}</p>
+        </mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>Collection: {{res.collectionName}}</p>
+        <p>Collection Price: {{res.collectionPrice | currency}}</p>
+        <p>Click preview to preview... <a [href]="res.previewUrl">Preview</a> √</p>
+        <p>Track Name: {{res.trackName}}</p>
+        <p>Track Count: {{res.trackCount}}</p>
       </mat-card-content>
     </mat-card>
   </div>
 </div>
+
