@@ -1,12 +1,18 @@
 <div class="list-grid">
   <mat-card>
     <mat-card-header>
-      <mat-card-title><h2>title</h2></mat-card-title>
-      <mat-card-subtitle>subtitle</mat-card-subtitle>
-    </mat-card-header>
-    <img/>
+      <mat-card-title><h2>{{movie.Title}}</h2></mat-card-title>
+      <mat-card-subtitle>
+        Released: {{movie.Released | date}}, Rated: {{movie.Rated}}
+      </mat-card-subtitle>
+      </mat-card-header>
+    <img [src]="movie.Poster"/>
     <mat-card-content>
-      some content
+      <p><strong>Description: </strong>{{movie.Plot}}</p>
+      <p><strong>Awards: </strong>{{movie.Awards}}</p>
+      <p><strong>Production: </strong>{{movie.Production}}</p>
+      <p><strong>Box Office: </strong>{{movie.BoxOffice}}</p>
+      <p>Visit the movie <a [href]="movie.Website">Website</a></p>
     </mat-card-content>
   </mat-card>
 </div>
