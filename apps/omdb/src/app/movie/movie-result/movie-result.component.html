@@ -8,11 +8,11 @@
       </mat-card-header>
     <img [src]="movie.Poster"/>
     <mat-card-content>
-      <p><strong>Description: </strong>{{movie.Plot}}</p>
-      <p><strong>Awards: </strong>{{movie.Awards}}</p>
+      <p>Visit the movie <a [href]="movie.Website" target="_blank">Website</a></p>
       <p><strong>Production: </strong>{{movie.Production}}</p>
       <p><strong>Box Office: </strong>{{movie.BoxOffice}}</p>
-      <p>Visit the movie <a [href]="movie.Website">Website</a></p>
+      <p><strong>Description: </strong>{{movie.Plot}}</p>
+      <p><strong>Awards: </strong>{{movie.Awards}}</p>
     </mat-card-content>
   </mat-card>
 </div>
