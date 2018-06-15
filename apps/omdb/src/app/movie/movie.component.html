@@ -1,8 +1,8 @@
 <div class="movie-grid">
   <div class="search-card">
-    <app-movie-search></app-movie-search>
+    <app-movie-search (search)="getMovies($event)"></app-movie-search>
   </div>
-    <div class="result-card">
-      <app-movie-result [movie]="movie"></app-movie-result>
-    </div>
+  <div class="result-card">
+    <app-movie-result [movie]="movie"></app-movie-result>
   </div>
+</div>

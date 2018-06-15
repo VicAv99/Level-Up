@@ -7,7 +7,8 @@
   <form>
     <mat-card-content>
       <mat-input-container>
-        <input matInput placeholder="Search..." type="text" name="search">
+        <input matInput placeholder="Search..."
+        (keyup)="search.emit(searchStr)" [(ngModel)]="searchStr" type="text" name="search">
       </mat-input-container>
     </mat-card-content>
   </form>

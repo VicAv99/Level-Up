@@ -8,6 +8,10 @@ mat-card-content {
   padding-bottom: 0;
 }
 
+mat-input-container {
+  width: 95%;
+}
+
 /* *:not(path):not(g) {
 	color:                    hsla(210, 100%, 100%, 0.9) !important;
 	background:               hsla(210, 100%,  50%, 0.2) !important;

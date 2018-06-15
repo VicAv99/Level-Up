@@ -1,18 +1,31 @@
-<div class="list-grid">
-  <mat-card>
-    <mat-card-header>
-      <mat-card-title><h2>{{movie.Title}}</h2></mat-card-title>
-      <mat-card-subtitle>
-        Released: {{movie.Released | date}}, Rated: {{movie.Rated}}
-      </mat-card-subtitle>
-      </mat-card-header>
+<mat-card *ngIf="movie">
+  <mat-card-header>
+    <mat-card-title><h2>{{movie.Title}}</h2></mat-card-title>
+    <mat-card-subtitle>
+      Released: {{movie.Released | date}}, Rated: {{movie.Rated}}
+    </mat-card-subtitle>
+    </mat-card-header>
+  <a [href]="movie.Website" target="_blank">
     <img [src]="movie.Poster"/>
-    <mat-card-content>
-      <p>Visit the movie <a [href]="movie.Website" target="_blank">Website</a></p>
-      <p><strong>Production: </strong>{{movie.Production}}</p>
-      <p><strong>Box Office: </strong>{{movie.BoxOffice}}</p>
-      <p><strong>Description: </strong>{{movie.Plot}}</p>
-      <p><strong>Awards: </strong>{{movie.Awards}}</p>
-    </mat-card-content>
-  </mat-card>
-</div>
+  </a>
+  <mat-card-content>
+    <p><strong>Production: </strong>{{movie.Production}}</p>
+    <p><strong>Box Office: </strong>{{movie.BoxOffice}}</p>
+    <p><strong>Description: </strong>{{movie.Plot}}</p>
+    <p><strong>Awards: </strong>{{movie.Awards}}</p>
+    <h3>Ratings: </h3>
+    <mat-accordion>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h3>Critic ratings...</h3>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div *ngFor="let rate of movie.Ratings">
+          <p>{{rate.Source}}: {{rate.Value}}</p>
+          <hr>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </mat-card-content>
+</mat-card>

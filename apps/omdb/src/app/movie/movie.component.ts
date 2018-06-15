@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { OmdbService } from '../shared/omdb.service';
-import { Movie } from '../shared/movie';
+import { Movie } from '../shared/models/movie';
 
 @Component({
   selector: 'app-movie',
@@ -8,17 +8,15 @@ import { Movie } from '../shared/movie';
   styleUrls: ['./movie.component.css']
 })
 export class MovieComponent implements OnInit {
-  movies: Movie[];
   movie: Movie;
 
   constructor(private omdbService: OmdbService) { }
 
   ngOnInit() {
-    this.getMovie();
   }
 
-  getMovie() {
-    this.omdbService.omdbMovies()
+  getMovies(srch) {
+    this.omdbService.searchOmdbMovies(srch)
       .subscribe(res => this.movie = res);
   }
 }
