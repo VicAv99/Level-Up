@@ -23,7 +23,7 @@
     "deploy:venturbook": "ng build -a venturbook && cp ./dist/apps/venturbook/index.html ./dist/apps/venturbook/200.html && surge ./dist/apps/venturbook https://venturbook.surge.sh",
     "deploy:spotify": "ng build -a spotify-api && cp ./dist/apps/spotify-api/index.html ./dist/apps/spotify-api/200.html && surge ./dist/apps/spotify-api https://ng-spot.surge.sh",
     "deploy:itunes": "ng build -a itunes-api && cp ./dist/apps/itunes-api/index.html ./dist/apps/itunes-api/200.html && surge ./dist/apps/itunes-api https://isearch-it.surge.sh",
-    "deploy:omdb": "ng build -a omdb && cp ./dist/apps/omdb/index.html ./dist/apps/omdb/200.html && surge ./dist/apps/omdb https://OMD-b.surge.sh",
+    "deploy:omdb": "ng build -a omdb && cp ./dist/apps/omdb/index.html ./dist/apps/omdb/200.html && surge ./dist/apps/omdb http://OMD-b.surge.sh",
     "test": "ng test",
     "lint": "./node_modules/.bin/nx lint && ng lint",
     "e2e": "ng e2e",
