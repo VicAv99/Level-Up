@@ -1,0 +1,16 @@
+<div class="wrapper">
+  <mat-card *ngFor="let comp of competitions"
+  routerLink="/competitions/{{comp.id}}">
+    <mat-card-header>
+      <mat-card-title>
+        <h1>League: {{comp.league}}</h1>
+      </mat-card-title>
+      <mat-card-subtitle>
+        {{comp.year}}
+      </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>{{comp.caption}}</p>
+    </mat-card-content>
+  </mat-card>
+</div>
