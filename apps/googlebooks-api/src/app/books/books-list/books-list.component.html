@@ -1,3 +1,13 @@
-<p>
-  books-list works!
-</p>
+<div *ngIf="searchRes">
+  <mat-card *ngFor="let res of searchRes">
+    <mat-card-header>
+      <mat-card-title>
+        <h1>{{res.volumeInfo.title}}</h1>
+      </mat-card-title>
+    </mat-card-header>
+    <img [src]="res.volumeInfo.imageLinks?.smallThumbnail"/>
+    <mat-card-content>
+      <a [href]="res.selfLink">{{res.selfLink}}</a>
+    </mat-card-content>
+  </mat-card>
+</div>

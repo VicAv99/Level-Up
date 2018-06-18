@@ -1,3 +1,8 @@
-<p>
-  books works!
-</p>
+<div class="books-grid">
+  <div class="books-list">
+    <app-books-list [searchRes]="searchRes"></app-books-list>
+  </div>
+  <div class="books-detail">
+    <app-books-search (search)="searchBooks($event)"></app-books-search>
+  </div>
+</div>
