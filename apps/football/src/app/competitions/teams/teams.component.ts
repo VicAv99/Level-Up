@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FootballService } from '../shared/football.service';
+import { FootballService } from '../../shared/football.service';
 import { ActivatedRoute } from '@angular/router';
-import { Team } from '../shared/models/team';
-import { Competitions } from '../shared/models/competitions';
+import { Team } from '../../shared/models/team';
+import { Competitions } from '../../shared/models/competitions';
 import { map } from 'rxjs/operators';
 
 @Component({

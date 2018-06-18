@@ -9,7 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { AppMaterialModule } from '@levelUp/app-material.module';
 import { CompetitionsComponent } from './competitions/competitions.component';
-import { TeamsComponent } from './teams/teams.component';
+import { TeamsComponent } from './competitions/teams/teams.component';
 
 @NgModule({
   imports: [

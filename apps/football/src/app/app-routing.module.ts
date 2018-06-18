@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { CompetitionsComponent } from './competitions/competitions.component';
-import { TeamsComponent } from './teams/teams.component';
+import { TeamsComponent } from './competitions/teams/teams.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
