@@ -6,6 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+  title = 'Google Books App';
+  links = [
+    { path: '/home', icon: 'home', label: 'Home' },
+    { path: '/books', icon: 'loyalty', label: 'Books' },
+  ];
   constructor() {}
 
   ngOnInit() {}
