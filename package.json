@@ -16,7 +16,7 @@
     "start:itunes": "ng serve -a itunes-api -p 4206",
     "start:omdb": "ng serve -a omdb -p 4208",
     "start:football": "ng serve -a football -p 4209",
-    "start:airq": "ng serve -a airQ -p 4210",
+    "start:airq": "ng serve -a air-q -p 4210",
     "start:tmass": "ng serve -a t-mass -p 4211",
     "start:xkcd": "ng serve -a xkcd -p 4212",
     "start:venturbook": "ng serve -a venturbook -p 4207",
