@@ -7,7 +7,7 @@ import { QualityService } from '../shared/quality.service';
   styleUrls: ['./locations.component.css']
 })
 export class LocationsComponent implements OnInit {
-  phoenix;
+  phoenix: any[];
 
   constructor(private qualityService: QualityService) { }
 
@@ -18,7 +18,7 @@ export class LocationsComponent implements OnInit {
 
   getPhxQuality() {
     this.qualityService.getPhoenixLocation()
-      .subscribe(res => this.phoenix = res.results[5201]);
+      .subscribe(res => this.phoenix = res.results);
   }
 
   log() {

@@ -12,7 +12,7 @@ export class QualityService {
   getPhoenixLocation() {
     const url = `${BASE}/locations`;
     let params = new HttpParams();
-    params = params.append('limit', '10000')
+    params = params.append('limit', '10')
     params = params.append('?city', 'Phoenix')
     params = params.append('?country', 'US')
 

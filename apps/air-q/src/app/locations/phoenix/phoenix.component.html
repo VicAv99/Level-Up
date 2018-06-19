@@ -1,15 +1,17 @@
-<mat-card>
-  <mat-card-header>
-    <mat-card-title>
-      <h1>{{phoenix?.city}}</h1>
-    </mat-card-title>
-    <mat-card-subtitle>
-      {{phoenix?.location}}
-    </mat-card-subtitle>
-  </mat-card-header>
-  <mat-card-content>
-    {{phoenix?.sourceName}}
-  </mat-card-content>
-</mat-card>
+<div class="wrapper">
+  <mat-card *ngFor="let p of phoenix">
+    <mat-card-header>
+      <mat-card-title>
+        <h1>{{p?.city}}</h1>
+      </mat-card-title>
+      <mat-card-subtitle>
+        {{p?.location}}
+      </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      {{p?.sourceName}}
+    </mat-card-content>
+  </mat-card>
+</div>
 
 <h5>Psst, check the console.</h5>
