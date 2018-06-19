@@ -1,15 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-phoenix',
   templateUrl: './phoenix.component.html',
   styleUrls: ['./phoenix.component.css']
 })
-export class PhoenixComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+export class PhoenixComponent {
+  @Input() phoenix;
 }
