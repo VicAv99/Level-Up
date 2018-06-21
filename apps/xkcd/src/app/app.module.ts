@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { AppComponent } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NxModule } from '@nrwl/nx';
 import { AppRoutingModule } from './app-routing.module';
@@ -9,6 +8,7 @@ import { AppMaterialModule } from '@levelUp/app-material.module';
 
 import { ComicsService } from './shared/comics.service';
 
+import { AppComponent } from './app.component';
 import { CurrentComicComponent } from './comics/current-comic/current-comic.component';
 import { ComicsComponent } from './comics/comics.component';
 import { HomeComponent } from './home/home.component';
@@ -25,10 +25,10 @@ import { RandomComicComponent } from './comics/random-comic/random-comic.compone
   ],
   declarations: [
     AppComponent,
-    HomeComponent,
     ComicsComponent,
+    CurrentComicComponent,
+    HomeComponent,
     RandomComicComponent,
-    CurrentComicComponent
   ],
   bootstrap: [AppComponent],
   providers: [ComicsService]

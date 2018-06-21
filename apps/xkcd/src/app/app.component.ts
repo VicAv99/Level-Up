@@ -5,8 +5,10 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit() {}
+export class AppComponent {
+  title = 'XKCD Comics';
+  links = [
+    { path: '/home', icon: 'home', label: 'Home' },
+    { path: '/comics', icon: 'loyalty', label: 'Comics' },
+  ];
 }
