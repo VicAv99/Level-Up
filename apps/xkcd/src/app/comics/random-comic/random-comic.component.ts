@@ -1,6 +1,6 @@
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { Comic } from '../../shared/models/comic';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-random-comic',
@@ -20,12 +20,13 @@ export class RandomComicComponent implements OnInit {
 
   ngOnInit() {
     this.form = this.fb.group({
-      numberSrch: ''
+      numberSrch: new FormControl('', Validators.maxLength(5))
     })
   }
 
   createId() {
     const id = Math.floor((Math.random() * 100) + 1);
     this.randomId.emit(id);
+    this.form.reset();
   }
 }
