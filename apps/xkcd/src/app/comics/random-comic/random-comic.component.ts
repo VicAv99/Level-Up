@@ -20,7 +20,7 @@ export class RandomComicComponent implements OnInit {
 
   ngOnInit() {
     this.form = this.fb.group({
-      numberSrch: new FormControl('', Validators.maxLength(5))
+      numberSrch: new FormControl('', Validators.maxLength(4))
     })
   }
 
