@@ -16,6 +16,5 @@ export class RandomComicComponent {
   createId() {
     const id = Math.floor((Math.random() * 100) + 1);
     this.randomId.emit(id);
-    console.log(id);
   }
 }

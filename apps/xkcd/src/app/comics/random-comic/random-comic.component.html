@@ -1,12 +1,12 @@
 <mat-card>
   <mat-card-header>
     <mat-card-title>
-      <h2>Random Comic: {{random.title}}</h2>
+      <h2>Random Comic: <span>{{random.title}}</span></h2>
     </mat-card-title>
   </mat-card-header>
   <img [src]="random.img" [alt]="random.alt"/>
   <mat-card-content>
-    {{random.transcript}}
+    <p>{{random.transcript}}</p>
   </mat-card-content>
   <mat-card-actions>
     <button mat-raised-button color="primary" (click)="createId()">Random</button>

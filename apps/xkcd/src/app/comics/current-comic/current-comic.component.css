@@ -1,6 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Poor+Story|Shadows+Into+Light');
+
 mat-card {
   padding-top: 0;
   padding-bottom: 5px;
+}
+
+mat-card-title span {
+  font-family: 'Shadows Into Light';
+  font-size: 30px;
+  font-weight: 600;
 }
 
 mat-card-content {
@@ -11,4 +19,10 @@ mat-card-content {
 mat-input-container {
   width: 90%;
   margin-left: 15px;
+}
+
+mat-card-content p {
+  font-family: 'Poor Story';
+  font-size: 24px;
+  font-weight: 700;
 }
