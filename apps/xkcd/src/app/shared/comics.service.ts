@@ -18,7 +18,7 @@ export class ComicsService {
 
   getRandomComic(id) {
     const url = `${BASE}/${id}/info.0.json`;
-    return this.http.get(url)
+    return this.http.get<Comic>(url)
       .pipe(map(res => res));
   }
 

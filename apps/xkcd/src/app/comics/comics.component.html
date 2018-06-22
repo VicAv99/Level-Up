@@ -3,6 +3,9 @@
     <app-current-comic [current]="currentComic"></app-current-comic>
   </div>
   <div class="random-comic">
-    <app-random-comic></app-random-comic>
+    <app-random-comic
+    [randomComic]="randomComic"
+    (randomId)="displayRandomComic($event)">
+    </app-random-comic>
   </div>
 </div>
