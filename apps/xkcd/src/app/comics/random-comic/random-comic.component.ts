@@ -1,17 +1,28 @@
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { Comic } from '../../shared/models/comic';
+import { FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-random-comic',
   templateUrl: './random-comic.component.html',
   styleUrls: ['./random-comic.component.css']
 })
-export class RandomComicComponent {
+export class RandomComicComponent implements OnInit {
   random: Comic;
+  form: FormGroup;
   @Input() set randomComic(value: Comic) {
     this.random = Object.assign({}, value);
   }
   @Output() randomId = new EventEmitter();
+  @Output() searchNum = new EventEmitter();
+
+  constructor (private fb: FormBuilder) {}
+
+  ngOnInit() {
+    this.form = this.fb.group({
+      numberSrch: ''
+    })
+  }
 
   createId() {
     const id = Math.floor((Math.random() * 100) + 1);

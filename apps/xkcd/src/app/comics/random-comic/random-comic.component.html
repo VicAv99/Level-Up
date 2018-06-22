@@ -10,5 +10,10 @@
   </mat-card-content>
   <mat-card-actions>
     <button mat-raised-button color="primary" (click)="createId()">Random</button>
+    <form [formGroup]="form">
+      <mat-form-field>
+        <input matInput type="input" placeholder="search by number..." (keydown)="searchNum.emit(form.get('numberSrch').value)" formControlName="numberSrch">
+      </mat-form-field>
+    </form>
   </mat-card-actions>
 </mat-card>

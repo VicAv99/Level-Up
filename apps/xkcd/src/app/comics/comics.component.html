@@ -5,7 +5,8 @@
   <div class="random-comic">
     <app-random-comic
     [randomComic]="randomComic"
-    (randomId)="displayRandomComic($event)">
+    (randomId)="displayRandomComic($event)"
+    (searchNum)="displayNumberComic($event)">
     </app-random-comic>
   </div>
 </div>

@@ -29,4 +29,9 @@ export class ComicsComponent implements OnInit {
       .subscribe(random => this.randomComic = random);
   }
 
+  displayNumberComic(cid) {
+    this.comicService.getRandomComic(cid)
+    .subscribe(random => this.randomComic = random);
+  }
+
 }

@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NxModule } from '@nrwl/nx';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppMaterialModule } from '@levelUp/app-material.module';
 
 import { ComicsService } from './shared/comics.service';
@@ -21,6 +21,7 @@ import { RandomComicComponent } from './comics/random-comic/random-comic.compone
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     AppMaterialModule
   ],
   declarations: [
