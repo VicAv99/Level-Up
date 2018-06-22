@@ -1,3 +1,14 @@
-<p>
-  current-comic works!
-</p>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      <h2>Current Comic: {{comic.title}}</h2>
+    </mat-card-title>
+    <mat-card-subtitle>
+      {{comic.month}} {{comic.day}}, {{comic.year}}
+    </mat-card-subtitle>
+  </mat-card-header>
+  <img [src]="comic.img" [alt]="comic.alt"/>
+  <mat-card-content>
+    {{comic.transcript}}
+  </mat-card-content>
+</mat-card>
