@@ -8,11 +8,15 @@ VenturPlex Challenge to create an app (Simple Master Detail View) a day for 30 d
 
 > Links to apps
 > - [YouTube API](https://youtube-api-app.surge.sh/) app
-> - [Twitter API](http://twitter-app.surge.sh) app
-> - [StarWars API](https://starwars-api-app.surge.sh) app
-> - [Poke API](https://poke-app.surge.sh) app
-> - [ngSpot](https://ng-spot.surge.sh) app
-> - [iTunes Search](https://itunes-search-app.surge.sh) app
+> - [Twitter API](http://twitter-app.surge.sh/) app
+> - [StarWars API](https://starwars-api-app.surge.sh/) app
+> - [Poke API](https://poke-app.surge.sh/) app
+> - [ngSpot](https://ng-spot.surge.sh/) app
+> - [iTunes Search](https://itunes-search-app.surge.sh/) app
+> - [omd-b mobies](http://omd-b.surge.sh/) app
+> - ["Football"](https://football-not-soccer.surge.sh/) app
+> - [AirQ](https://airque.surge.sh/) app
+> - [XKCD](https://xkcd-app.surge.sh/) app
 
 > Bonus apps
 > - [VenturBook](http://venturbook.surge.sh) app
