@@ -1,7 +1,3 @@
-mat-card {
-  padding: 0 0 35px 0;
-}
-
 mat-card-header {
   margin: auto;
   width: 80%;
@@ -28,10 +24,6 @@ mat-card-actions {
   margin: auto;
   padding: 0;
   width: 80%;
-}
-
-button.right-button {
-  margin-left: 10px;
 }
 
 img.mat-list-icon {
