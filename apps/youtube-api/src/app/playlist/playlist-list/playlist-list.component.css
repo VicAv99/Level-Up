@@ -1,11 +1,3 @@
-/* *:not(path):not(g) {
-	color:                    hsla(210, 100%, 100%, 0.9) !important;
-	background:               hsla(210, 100%,  50%, 0.2) !important;
-	outline:    solid 0.25rem hsla(210, 100%, 100%, 0.5) !important;
-
-	box-shadow: none !important;
-} */
-
 mat-card {
   padding: 0 0 35px 0;
 }
@@ -42,9 +34,12 @@ button.right-button {
   margin-left: 10px;
 }
 
-.list-grid {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-gap: 10px;
-  grid-auto-rows: minmax(100px, auto);
+img.mat-list-icon {
+  border-radius: 5px !important;
+  width: 100px !important;
+  height: auto !important;
+}
+
+mat-list-item {
+  height: 100% !important;
 }

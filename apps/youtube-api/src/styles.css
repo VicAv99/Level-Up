@@ -7,6 +7,7 @@ html {
 
 body {
   margin: 0;
+  font-family: Roboto, arial, sans-serif;
 }
 
 mat-sidenav-container {
@@ -15,4 +16,11 @@ mat-sidenav-container {
 
 mat-toolbar-row {
   justify-content: space-between;
+}
+
+hr {
+  width: 80%;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, #ff408062, #ff40809d, #ff4081, #ff40809d, #ff408062);
 }

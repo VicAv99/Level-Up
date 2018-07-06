@@ -2,6 +2,7 @@ export interface Snippet {
   channelTitle: string;
   description: string;
   publishedAt: string;
-  thumbnails: object;
+  thumbnails: { high: { url: string } };
   title: string;
+  resourceId?: { videoId?: string }
 }

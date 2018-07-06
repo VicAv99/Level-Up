@@ -6,17 +6,13 @@
   </div>
 
   <div class="playlist-video">
-    <app-playlist-video></app-playlist-video>
+    <app-playlist-video [playlist]="currentPlaylist"></app-playlist-video>
   </div>
 
-  <div class="playlist-detail">
+  <!-- use this maybe later if you want to search and add a video -->
+  <!-- <div class="playlist-detail">
     <app-playlist-detail [video]="currentPlaylist"
                          (saved)="saveVideo($event)"
                          (cancelled)="cancel($event)"></app-playlist-detail>
-  </div>
+  </div> -->
 </div>
-
-
-
-
-<!-- <pre>{{playlist | json}}</pre> -->
