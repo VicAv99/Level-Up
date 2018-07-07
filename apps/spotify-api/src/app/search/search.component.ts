@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { SpotifyService } from '../shared/spotify.service';
 import { Artist } from '../shared/artist';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { FormControl } from '../../../../../node_modules/@angular/forms';
+import { debounceTime, distinctUntilChanged, map, switchMap } from '../../../../../node_modules/rxjs/operators';
 
 @Component({
   selector: 'app-search',
@@ -9,24 +11,41 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
-  searchStr: string;
+  accessToken: string;
   searchRes: Artist[];
+  searchControl: FormControl = new FormControl();
 
   constructor(
     private spotifyService: SpotifyService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) {}
 
   ngOnInit() {
-    const accessToken = this.route.snapshot.fragment
-      .split('access_token=')[1]
-      .split('&token')[0];
-    this.spotifyService.setToken(accessToken);
+    if (this.route.snapshot.fragment) {
+      this.handleAccessToken();
+    }
+    this.searchMusic();
   }
 
   searchMusic() {
-    this.spotifyService
-      .searchMusic(this.searchStr)
-      .subscribe(res => this.searchRes = res.artists.items);
+    this.searchControl.valueChanges.pipe(
+      debounceTime(500),
+      distinctUntilChanged(),
+      map(event => event),
+      switchMap(qq => this.spotifyService.searchMusic(qq))
+    ).subscribe(res => this.searchRes = res.artists.items);
+  }
+
+  handleAccessToken() {
+    this.accessToken = this.route.snapshot.fragment
+      .split('access_token=')[1]
+      .split('&token')[0];
+    localStorage.setItem('accessToken', this.accessToken);
+    this.router.navigate(['/search'], { queryParams: {} });
+  }
+
+  selectArtist(artist: string) {
+    window.open(artist, '_blank');
   }
 }

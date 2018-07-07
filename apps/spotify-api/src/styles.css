@@ -13,7 +13,9 @@ mat-sidenav-container {
   height: 100vh;
 }
 
-mat-toolbar-row {
+mat-toolbar {
+  z-index: 10;
+  position: relative;
   justify-content: space-between;
 }
 
@@ -34,5 +36,12 @@ mat-card-actions {
   margin-left: 0;
   padding: 0;
   width: 100%;
+}
+
+hr {
+  width: 80%;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, #ff408062, #ff40809d, #ff4081, #ff40809d, #ff408062);
 }
 

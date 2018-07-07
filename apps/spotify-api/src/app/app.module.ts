@@ -2,9 +2,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NxModule } from '@nrwl/nx';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppMaterialModule } from '@levelUp/app-material.module';
 // Services
 import { SpotifyService } from './shared/spotify.service';
@@ -14,6 +14,8 @@ import { AlbumComponent } from './album/album.component';
 import { ArtistComponent } from './artist/artist.component';
 import { LoginComponent } from './login/login.component';
 import { SearchComponent } from './search/search.component';
+import { TokenInterceptor } from './shared/interceptors/token.interceptor';
+import { AuthInterceptor } from './shared/interceptors/auth.interceptor';
 
 @NgModule({
   imports: [
@@ -22,6 +24,7 @@ import { SearchComponent } from './search/search.component';
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     AppMaterialModule
   ],
   declarations: [
@@ -32,6 +35,6 @@ import { SearchComponent } from './search/search.component';
     SearchComponent,
   ],
   bootstrap: [AppComponent],
-  providers: [SpotifyService]
+  providers: [SpotifyService, {provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true}, {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}]
 })
 export class AppModule {}

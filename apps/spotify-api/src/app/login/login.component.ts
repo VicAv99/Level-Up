@@ -12,11 +12,8 @@ export class LoginComponent implements OnInit {
   ngOnInit() { }
 
   login() {
-    (<any>window).location = 'https://accounts.spotify.com/authorize?client_id=da88c95033a84b2ab047c9fbf69555be&response_type=token&redirect_uri=http://localhost:4205/search';
+    const redirect = `${window.location.protocol}//${window.location.host}/search`;
+    (<any>window).location = `https://accounts.spotify.com/authorize?client_id=da88c95033a84b2ab047c9fbf69555be&response_type=token&redirect_uri=${redirect}`;
   }
-
-  // redirect
-  // dev with local host - http://localhost:4205/search
-  // dev with surge - https://ng-spot.surge.sh/search
 
 }
