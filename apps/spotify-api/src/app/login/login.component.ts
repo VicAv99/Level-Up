@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
 
   login() {
     const redirect = `${window.location.protocol}//${window.location.host}/search`;
-    (<any>window).location = `https://accounts.spotify.com/authorize?client_id=da88c95033a84b2ab047c9fbf69555be&response_type=token&redirect_uri=${redirect}`;
+    (<any>window).location = `https://accounts.spotify.com/authorize?client_id=aad74480820d44e283324e8df9310670&response_type=token&redirect_uri=${redirect}`;
   }
 
 }

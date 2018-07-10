@@ -23,3 +23,8 @@ mat-card-actions {
   margin-left: 0;
 }
 
+@media screen and (max-width: 650px) {
+  .login-card {
+    grid-column: 1/4;
+  }
+}

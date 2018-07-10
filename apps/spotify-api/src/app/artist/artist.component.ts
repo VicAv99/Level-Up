@@ -12,7 +12,7 @@ import { map } from 'rxjs/operators';
 })
 export class ArtistComponent implements OnInit {
   id: string;
-  artist: Artist[];
+  artist: Artist;
   albums: Album[];
 
   constructor(

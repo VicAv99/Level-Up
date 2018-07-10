@@ -1,5 +1,5 @@
 mat-card {
-  padding-top: 0;
+  /* padding-top: 0; */
   padding-bottom: 35px;
 }
 
@@ -11,11 +11,15 @@ mat-card-content {
   padding: 15px 0;
 }
 
+.album-grid .mat-card-header-text h1 {
+  padding-bottom: 0 !important;
+  margin-bottom: 0;
+}
+
 .main-image img {
   border-radius: 50%;
-  width: 80%;
-  height: 80%;
-  margin-left: 10%;
+  width: auto;
+  height: 374px;
   background-size: cover;
 }
 
@@ -25,16 +29,32 @@ mat-card-content {
 
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(9, 1fr);
   grid-gap: 10px;
   grid-auto-rows: minmax(100px, auto);
 }
 
-.artist-card {
-  grid-column: 3/6;
+.artist-grid {
+  grid-column: 2/4;
   grid-row: 1;
   margin-bottom: 25%;
   margin-top: 20px;
+}
+
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  grid-column: 4/9;
+  margin-top: 20px;
+}
+
+.album-names {
+  width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .mute {

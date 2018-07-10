@@ -44,8 +44,4 @@ export class SearchComponent implements OnInit {
     localStorage.setItem('accessToken', this.accessToken);
     this.router.navigate(['/search'], { queryParams: {} });
   }
-
-  selectArtist(artist: string) {
-    window.open(artist, '_blank');
-  }
 }

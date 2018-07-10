@@ -45,3 +45,9 @@ hr {
   background-image: linear-gradient(to right, #ff408062, #ff40809d, #ff4081, #ff40809d, #ff408062);
 }
 
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}

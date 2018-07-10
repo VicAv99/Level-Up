@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { Post } from './post';
-import { Observable } from 'rxjs/Observable';
 
 const HERO = 'https://levelup-json.herokuapp.com/posts';
 
