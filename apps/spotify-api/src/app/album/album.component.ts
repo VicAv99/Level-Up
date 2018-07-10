@@ -11,7 +11,7 @@ import { map } from 'rxjs/operators';
 })
 export class AlbumComponent implements OnInit {
   id: string;
-  album: Album[];
+  album: Album;
 
   constructor(private spotifyService: SpotifyService,
               private route: ActivatedRoute) { }

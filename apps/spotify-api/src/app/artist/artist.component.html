@@ -17,10 +17,10 @@
       </mat-card>
     </div>
     <div class="album-grid">
-      <mat-card *ngFor="let album of albums" routerLink="/album/{{album.id}}">
+      <mat-card *ngFor="let album of albums" routerLink="/album/{{album.id}}" class="mat-list-option">
         <mat-card-header>
           <mat-card-title>
-            <h1>{{album.name}}</h1>
+            <h1 class="album-names">{{album.name}}</h1>
           </mat-card-title>
         </mat-card-header>
         <hr>
