@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  timesApikey: '250ef03a5ba446b6b1182b5ee0226b37'
+  bibleKey: '7f84e4de8ac203125ca0b46c162553b5'
 };

@@ -142,6 +142,14 @@
     {
       "project": "apps/timeswire/e2e/tsconfig.e2e.json",
       "exclude": "**/node_modules/**"
+    },
+    {
+      "project": "apps/bible/src/tsconfig.app.json",
+      "exclude": "**/node_modules/**"
+    },
+    {
+      "project": "apps/bible/e2e/tsconfig.e2e.json",
+      "exclude": "**/node_modules/**"
     }
   ],
   "test": {
@@ -180,6 +188,32 @@
       "name": "all-sports-products",
       "root": "apps/all-sports-products/src",
       "outDir": "dist/apps/all-sports-products",
+      "assets": [
+        "assets",
+        "favicon.ico"
+      ],
+      "index": "index.html",
+      "main": "main.ts",
+      "polyfills": "polyfills.ts",
+      "test": "../../../test.js",
+      "tsconfig": "tsconfig.app.json",
+      "testTsconfig": "../../../tsconfig.spec.json",
+      "prefix": "app",
+      "styles": [
+        "styles.css"
+      ],
+      "scripts": [],
+      "environmentSource": "environments/environment.ts",
+      "environments": {
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      },
+      "tags": []
+    },
+    {
+      "name": "bible",
+      "root": "apps/bible/src",
+      "outDir": "dist/apps/bible",
       "assets": [
         "assets",
         "favicon.ico"
